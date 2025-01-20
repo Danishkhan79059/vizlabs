@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -15,8 +14,6 @@ const Header = () => {
     setActiveLink(linkName);
     setIsMenuOpen(false); // Close menu when a link is clicked
   };
-
-  // const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {

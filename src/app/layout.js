@@ -21,7 +21,7 @@ export const metadata = {
   keywords:
     "data visualization, dashboards, analytics, business intelligence, Vizta",
   icons: {
-    icon: "./image/Group.png", // External URL for the favicon
+    icon: "https://vizta.in/image/Group.png", // Full URL for the favicon
   },
   openGraph: {
     title: "Vizta - Data Visualization Platform",
@@ -31,7 +31,7 @@ export const metadata = {
     site_name: "Vizta",
     images: [
       {
-        url: "./image/Group.png", // Make sure you have a relevant image for social sharing
+        url: "https://vizta.in/image/Group.png", // Full URL for the Open Graph image
         width: 1200,
         height: 630,
         alt: "Vizta - Data Visualization Platform",
@@ -43,7 +43,7 @@ export const metadata = {
     title: "Vizta - Data Visualization Platform",
     description:
       "Vizta offers powerful data visualizations and real-time analytics.",
-    image: "./image/Group.png", // Image for Twitter
+    image: "https://vizta.in/image/Group.png", // Full URL for the Twitter image
   },
 };
 
@@ -51,36 +51,25 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
+        {/* Primary Metadata */}
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
         <meta name="robots" content="index, follow" />
 
-        {/* Open Graph meta tags */}
+        {/* Open Graph Meta Tags */}
         <meta property="og:title" content={metadata.openGraph.title} />
-        <meta
-          property="og:description"
-          content={metadata.openGraph.description}
-        />
+        <meta property="og:description" content={metadata.openGraph.description} />
         <meta property="og:url" content={metadata.openGraph.url} />
         <meta property="og:site_name" content={metadata.openGraph.site_name} />
         <meta property="og:image" content={metadata.openGraph.images[0].url} />
-        <meta
-          property="og:image:width"
-          content={metadata.openGraph.images[0].width}
-        />
-        <meta
-          property="og:image:height"
-          content={metadata.openGraph.images[0].height}
-        />
+        <meta property="og:image:width" content={metadata.openGraph.images[0].width} />
+        <meta property="og:image:height" content={metadata.openGraph.images[0].height} />
 
-        {/* Twitter meta tags */}
+        {/* Twitter Meta Tags */}
         <meta name="twitter:card" content={metadata.twitter.card} />
         <meta name="twitter:title" content={metadata.twitter.title} />
-        <meta
-          name="twitter:description"
-          content={metadata.twitter.description}
-        />
+        <meta name="twitter:description" content={metadata.twitter.description} />
         <meta name="twitter:image" content={metadata.twitter.image} />
 
         {/* Favicon */}

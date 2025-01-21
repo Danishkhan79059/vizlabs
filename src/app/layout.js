@@ -2,7 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Head from "next/head"; // Import next/head for adding custom head elements of the 
+import Head from "next/head"; // Import next/head for adding custom head elements of the
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +21,7 @@ export const metadata = {
   keywords:
     "data visualization, dashboards, analytics, business intelligence, Viztaa",
   icons: {
-    icon: "./image/Group.png", // External URL for the favicon
+    icon: "/image/Group.png", // External URL for the favicon
   },
   openGraph: {
     title: "Vizta - Data Visualization Platform",
@@ -31,7 +31,7 @@ export const metadata = {
     site_name: "Vizta",
     images: [
       {
-        url: "./image/Group.png", // Make sure you have a relevant image for social sharing
+        url: "/image/Group.png", // Make sure you have a relevant image for social sharing
         width: 1200,
         height: 630,
         alt: "Vizta - Data Visualization Platform",
@@ -43,7 +43,7 @@ export const metadata = {
     title: "Vizta - Data Visualization Platform",
     description:
       "Vizta offers powerful data visualizations and real-time analytics.",
-    image: "./image/Group.png", // Image for Twitter
+    image: "/image/Group.png", // Image for Twitter
   },
 };
 

@@ -1,15 +1,27 @@
-
-"use client"
+"use client";
 import React from "react";
 import { IoArrowBack } from "react-icons/io5";
 // import { useNavigate } from "react-router";
 import { useRouter } from "next/navigation";
+import Head from "next/head";
 
 const page = () => {
   // const navigate = useNavigate();
   const router = useRouter();
+  const pageTitle = "Aritificial Intelligence";
   return (
     <>
+      <Head>
+        <title>{pageTitle}</title>
+        <meta
+          name="description"
+          content="Explore how Tau, an AI-powered feature in Vizta, leverages Large Language Models (LLMs) for dynamic data visualization and predictive insights."
+        />
+        <meta
+          name="keywords"
+          content="artificial intelligence, data visualization, business intelligence, predictive insights, Tau, Vizta"
+        />
+      </Head>
       <div className="min-h-screen py-10 pt-40">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
           {/* Text Section */}
@@ -52,7 +64,7 @@ const page = () => {
           {/* Image Section */}
           <div className="md:w-1/2 mt-8 md:mt-0">
             <button
-             onClick={() => router.back()} // Navigate back
+              onClick={() => router.back()} // Navigate back
               className="absolute top-[20%] left-[75%] flex items-center gap-2 p-2 rounded-lg bg-blue-100 shadow-md hover:shadow-lg transition"
             >
               <IoArrowBack className="text-gray-700 text-lg" />

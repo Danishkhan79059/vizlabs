@@ -15,7 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Vizta - Data Visualization Platform",
+  title: {
+    default: "Vizta - Data Visualization Platform",
+    template: "%s - Vizta - Data Visualization Platform",
+  },
   description:
     "Vizta is a data visualization platform that enables businesses to create insightful dashboards with real-time analytics.",
   keywords:
@@ -28,7 +31,7 @@ export const metadata = {
     description:
       "Vizta offers powerful data visualizations and real-time analytics to improves business decision-making.",
     url: "https://vizta.in",
-    site_name: "Vizta",
+    site_name: "Vizta - Data Visualization Platform",
     images: [
       {
         url: "https://vizta.in/image/Group.pngf", // Make sure you have a relevant image for social sharing

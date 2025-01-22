@@ -1,0 +1,31 @@
+# *
+User-agent: *
+Allow: /
+
+# test-bot
+User-agent: test-bot
+Allow: /path
+Allow: /path-2
+
+# black-listed-bot
+User-agent: black-listed-bot
+Disallow: /sub-path-1
+Disallow: /path-2
+
+# Host
+Host: https://vizta.in
+
+# Sitemaps
+Sitemap: https://vizta.in/sitemap.xml
+Sitemap: https://vizta.in/home
+Sitemap: https://vizta.in/about
+Sitemap: https://vizta.in/blog1
+Sitemap: https://vizta.in/blog2
+Sitemap: https://vizta.in/blog3
+Sitemap: https://vizta.in/blog4
+Sitemap: https://vizta.in/blog5
+Sitemap: https://vizta.in/blog6
+Sitemap: https://vizta.in/contact
+Sitemap: https://vizta.in/trial
+Sitemap: https://vizta.in/verifypage
+Sitemap: https://vizta.in/viztablog

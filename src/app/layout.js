@@ -34,7 +34,7 @@ export const metadata = {
     site_name: "Vizta - Data Visualization Platform",
     images: [
       {
-        url: "https://vizta.in/image/Group.pngf", // Make sure you have a relevant image for social sharing
+        url: "https://vizta.in/image/Group.png", // Make sure you have a relevant image for social sharing
         width: 1200,
         height: 630,
         alt: "Vizta - Data Visualization Platform",

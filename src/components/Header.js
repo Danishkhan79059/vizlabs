@@ -49,7 +49,7 @@ const Header = () => {
           } md:flex md:w-1/2 md:justify-start md:items-center md:gap-4 flex-col md:flex-row absolute md:static top-28 left-0 min-h-12 min-w-80 bg-white md:bg-transparent p-4 md:p-0 transition-all duration-300 rounded-md ml-6`}
         >
           <Link
-            href="/"
+            href="/home"
             className={`${
               activeLink === "home" ? "text-blue-700" : "hover:text-blue-700"
             } py-2 md:py-0`}

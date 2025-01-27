@@ -24,7 +24,7 @@ export const metadata = {
   keywords:
     "data visualization, dashboards, analytics, business intelligence, Viztaa",
   icons: {
-    icon: "https://vizta.in/image/Group.png", // External URL for the favicon
+    icon: "/favicon.ico", // External URL for the favicon
   },
   openGraph: {
     title: "Vizta - Data Visualization Platform",
@@ -34,7 +34,7 @@ export const metadata = {
     site_name: "Vizta - Data Visualization Platform",
     images: [
       {
-        url: "https://vizta.in/image/Group.png", // Make sure you have a relevant image for social sharing
+        url: "/favicon.ico", // Make sure you have a relevant image for social sharing
         width: 1200,
         height: 630,
         alt: "Vizta - Data Visualization Platform",
@@ -46,7 +46,7 @@ export const metadata = {
     title: "Vizta - Data Visualization Platform",
     description:
       "Vizta offers powerful data visualizations and real-time analytics.",
-    image: "https://vizta.in/image/Group.png", // Image for Twitter
+    image: "/favicon.ico", // Image for Twitter
   },
 };
 

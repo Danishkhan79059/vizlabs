@@ -77,13 +77,12 @@ const page = () => {
         "A detailed comparison of Vizta and Tableau to help you choose the right tool for your needs.",
       link: "/blog4",
     },
+    
   ];
 
   const handleLoadMore = () => {
     setVisibleBlogs((prev) => prev + 6);
   };
-
- 
 
   return (
     <>
@@ -208,7 +207,7 @@ const page = () => {
         </div>
       </div>
     </>
-  );        
+  );
 };
 
 export default page;

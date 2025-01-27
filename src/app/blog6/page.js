@@ -28,8 +28,10 @@ const page = () => {
               potential of your data.
             </p>
 
-            <p className="text-gray-600 mt-6 text-lg">
-              **Vizta** stands out as a tool for dashboard creation due to its:
+            <div className="text-gray-600 mt-6 text-lg">
+              <p>
+                **Vizta** stands out as a tool for dashboard creation due to its:
+              </p>
               <ul className="list-disc pl-6 mt-4 text-gray-600">
                 <li>
                   <strong>User-Friendly Interface:</strong> Whether you are a
@@ -50,7 +52,7 @@ const page = () => {
                   always display the latest data for accurate decision-making.
                 </li>
               </ul>
-            </p>
+            </div>
 
             <div className="flex items-center mt-6 md:mt-8">
               <img
@@ -125,13 +127,6 @@ const page = () => {
               <strong>Publish and Share:</strong> Publish your dashboard, grant
               access to users, and embed it in reports or web pages.
             </li>
-            <div className="md:w-1/2 mt-8 md:mt-0">
-              <img
-                src="https://res.cloudinary.com/dccfiolig/image/upload/v1734672975/screenshots/0d785a43-fa89-4fc1-b593-6a27eaf3f864_dashboard.png" // Replace with the actual image URL
-                alt="Illustration"
-                className="w-full max-w-sm md:max-w-md mx-auto rounded-2xl"
-              />
-            </div>
           </ul>
 
           {/* Heading: Best Practices for Dynamic Dashboards */}
@@ -159,14 +154,6 @@ const page = () => {
               <strong>Provide Context:</strong> Use tooltips, labels, and
               legends to make the dashboard intuitive.
             </li>
-
-            <div className="md:w-1/2 mt-8 md:mt-0">
-              <img
-                src="https://res.cloudinary.com/dccfiolig/image/upload/v1734705566/screenshots/071b898a-bfc8-4541-9fde-e8261775c56c_dashboard.png" // Replace with the actual image URL
-                alt="Illustration"
-                className="w-full max-w-sm md:max-w-md mx-auto rounded-2xl"
-              />
-            </div>
           </ul>
 
           {/* Heading: Unlocking Insights with Vizta */}

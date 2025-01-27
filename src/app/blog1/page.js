@@ -124,7 +124,8 @@ const page = () => {
 
           {/* Heading: The Future of Business Intelligence */}
           <h3 className="text-xl font-semibold text-gray-800 mt-8">
-            The Future of Business Intelligence
+            The Future of Business Intelligence: AI-Powered Agents and Advanced
+            Search with Tau
           </h3>
           <p className="text-gray-600 mt-4 text-lg">
             As the future of business intelligence evolves, AI will continue to

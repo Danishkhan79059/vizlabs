@@ -7,8 +7,6 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmojiEmotions } from "react-icons/md";
 
-
-
 const page = () => {
   const employees = [
     {

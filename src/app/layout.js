@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        <title>{metadata.title}</title>
+        <title>{metadata.title.default}</title>
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
         <meta name="robots" content="index, follow" />
@@ -92,6 +92,8 @@ export default function RootLayout({ children }) {
 
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        data-new-gr-c-s-check-loaded="14.1218.0"
+        data-gr-ext-installed=""
       >
         <Header />
         {children}

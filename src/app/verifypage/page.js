@@ -1,5 +1,4 @@
-
-"use client"
+"use client";
 import React from "react";
 
 const page = () => {
@@ -60,7 +59,6 @@ const page = () => {
           </div>
         </div>
 
-   
         <div className="mt-8 md:mt-0 md:ml-8 flex justify-center">
           <img
             src="https://t4.ftcdn.net/jpg/08/86/08/03/360_F_886080369_pufsScsZTfj1mdVWDG4ReafQrevQgvLC.jpg" // Replace with the actual mascot image

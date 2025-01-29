@@ -1,5 +1,4 @@
-
-"use client"
+"use client";
 import React from "react";
 import { IoArrowBack } from "react-icons/io5";
 import { useRouter } from "next/navigation";
@@ -15,14 +14,20 @@ const page = () => {
             Business Intelligence
           </span>
           <h1 className="text-3xl font-bold text-gray-800 mt-4 md:text-4xl lg:text-5xl">
-            Vizta Integrates with Your Data Sources
+            How Vizta Integrates with Your Data Sources
           </h1>
           <p className="text-gray-600 mt-6 md:mt-8 text-lg">
-            Vizta’s integration capabilities enable businesses to connect with a
-            wide range of data sources, including databases, APIs, and external
-            data services. This integration empowers users to seamlessly combine
-            internal and external data, ensuring a unified view of business
-            metrics for deeper insights and more informed decision-making.
+            <strong className="text-blue-400">
+              {" "}
+              Seamless Data Integration for Better Insights
+            </strong>{" "}
+            In today's data-driven world, having a business intelligence tool
+            that seamlessly connects with your data sources is crucial. Vizta is
+            designed to make data integration effortless, enabling users to
+            visualize, analyze, and gain insights from their data without
+            technical barriers. Whether your data resides in cloud-based
+            platforms, relational databases, or external APIs, Vizta ensures a
+            smooth and efficient connection process.
           </p>
           <p className="text-gray-600 mt-6 text-lg">
             Whether you are pulling data from a MySQL database, an API, or cloud
@@ -31,6 +36,7 @@ const page = () => {
             data connectors, businesses can eliminate data silos and access
             comprehensive insights with a few clicks.
           </p>
+
           <div className="flex items-center mt-6 md:mt-8">
             <img
               src="image/Group.png" // Vizta logo link
@@ -46,13 +52,13 @@ const page = () => {
 
         {/* Image Section */}
         <div className="md:w-1/2 mt-8 md:mt-0">
-        <button
-              onClick={() => router.back()}
-              className="absolute top-[20%] left-[75%] flex items-center gap-2 p-2 rounded-lg bg-blue-100 shadow-md hover:shadow-lg transition"
-            >
-              <IoArrowBack className="text-gray-700 text-lg" />
-              <span className="text-gray-700 text-sm font-semibold">Go Back</span>
-            </button>
+          <button
+            onClick={() => router.back()}
+            className="absolute top-[20%] left-[75%] flex items-center gap-2 p-2 rounded-lg bg-blue-100 shadow-md hover:shadow-lg transition"
+          >
+            <IoArrowBack className="text-gray-700 text-lg" />
+            <span className="text-gray-700 text-sm font-semibold">Go Back</span>
+          </button>
           <img
             src="https://media.licdn.com/dms/image/D4D12AQE-d4xw2oPNLg/article-cover_image-shrink_720_1280/0/1717732779597?e=2147483647&v=beta&t=lE3ohyt81fLUGGt-LVhoIx-UBetVlokBsBMBewE8EcM" // Replace with the actual image URL
             alt="Illustration"
@@ -80,6 +86,7 @@ const page = () => {
         <h3 className="text-xl font-semibold text-gray-800 mt-8">
           Key Features of Vizta’s Data Integration:
         </h3>
+        
         <ul className="list-disc pl-6 mt-4 text-gray-600">
           <li>
             Connect with various data sources like MySQL, APIs, and cloud

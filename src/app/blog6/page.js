@@ -30,7 +30,8 @@ const page = () => {
 
             <div className="text-gray-600 mt-6 text-lg">
               <p>
-                **Vizta** stands out as a tool for dashboard creation due to its:
+                **Vizta** stands out as a tool for dashboard creation due to
+                its:
               </p>
               <ul className="list-disc pl-6 mt-4 text-gray-600">
                 <li>

@@ -14,7 +14,7 @@ function Footer() {
     <footer className="w-full bg-blue-950 text-white mt-10 py-2 text-center bottom-0 left-0">
       <div className="space-y-2">
         <div>
-          <Link href="" className="text-sm font-semibold hover:underline">
+          <Link href="/pricing" className="text-sm font-semibold hover:underline">
             Why Vizta?
           </Link>
         </div>

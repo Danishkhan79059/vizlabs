@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://vizta.in"),
   title: {
     default: "Vizta - Data Visualization Platform",
     template: "%s - Vizta - Data Visualization Platform",

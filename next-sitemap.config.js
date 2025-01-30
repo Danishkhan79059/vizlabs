@@ -1,26 +1,3 @@
-// /** @type {import('next-sitemap').IConfig} */
-// module.exports = {
-//     siteUrl: 'https://vizta.in', // Updated base site URL
-//     generateRobotsTxt: true, // Generate robots.txt
-//     sitemapSize: 7000, // Adjusted sitemap size
-//     exclude: ['/404'], // Exclude unnecessary routes like 404
-//     robotsTxtOptions: {
-//       policies: [
-//         {
-//           userAgent: '*', // Default policy for all user agents
-//           allow: '/', // Allow crawling all routes
-//         },
-//         {
-//           userAgent: 'black-listed-bot', // Example policy for a specific bot
-//           disallow: ['/404'], // Block specific routes
-//         },
-//       ],
-//       additionalSitemaps: [
-//         'https://vizta.in/home', // Custom sitemap URLs
-//         'https://vizta.in/about',
-//       ],
-//     },
-//   };
 
 /** @type {import('next-sitemap').IConfig} */
 

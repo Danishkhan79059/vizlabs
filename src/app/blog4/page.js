@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { IoArrowBack } from "react-icons/io5";
 import { useRouter } from "next/navigation";
@@ -45,13 +45,13 @@ const page = () => {
 
         {/* Image Section */}
         <div className="md:w-1/2 mt-8 md:mt-0">
-        <button
-               onClick={() => router.back()} // Navigate back
-              className="absolute top-[15%] left-[75%] flex items-center gap-2 p-2 rounded-lg bg-blue-100 shadow-md hover:shadow-lg transition"
-            >
-              <IoArrowBack className="text-gray-700 text-lg" />
-              <span className="text-gray-700 text-sm font-semibold">Go Back</span>
-            </button>
+          <button
+            onClick={() => router.back()} // Navigate back
+            className="absolute top-[15%] left-[75%] flex items-center gap-2 p-2 rounded-lg bg-blue-100 shadow-md hover:shadow-lg transition"
+          >
+            <IoArrowBack className="text-gray-700 text-lg" />
+            <span className="text-gray-700 text-sm font-semibold">Go Back</span>
+          </button>
           <img
             src="image/vta.webp" // Replace with the actual image URL
             alt="Illustration"

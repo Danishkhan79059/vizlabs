@@ -63,54 +63,87 @@ const Main = () => {
 
   return (
     <>
-      <main
-        className="flex flex-col min-h-screen lg:flex-row items-center justify-between px-6 lg:px-60 py-20 pt-40 bg-gradient-to-r from-blue-50 to-white via-blue-50"
-        data-aos="fade-up"
+      <div
+        className="min-h-screen flex flex-col items-center justify-center bg-white px-4 pt-32"
         style={{
           background:
             "linear-gradient(136deg, rgba(235, 248, 255, 0.5) 50%, #ffffff 50%)",
         }}
       >
-        {/* Text Section */}
-        <div className="text-center lg:text-left max-w-md lg:right-[14%]">
-          <h1 className="text-xl lg:text-[2rem] mb-2 font-bold ">
-            Data Visualized
-          </h1>
-          <h2 className="text-xl lg:text-[2rem] mb-6  font-bold">
-            Decisions Amplified
-          </h2>
-
-          <p className="text-lg text-gray-700 mb-6 ">
-            Great decisions start with reliable data. Vizta transforms
-            information into actionable insights, empowering you to make
-            confident choices and achieve extraordinary results. Unlock clarity,
-            innovation, and success with Vizta.
-          </p>
-          <button
-            onClick={() => router.push("/trial")}
-            className="px-8 py-2 bg-blue-950 hover:bg-blue-700 text-white rounded text-lg "
-          >
-            Get Started
-          </button>
+        <h1 className="text-4xl md:text-6xl font-bold text-center text-blue-950 mb-4">
+          Data Visualized Decisions Amplified
+        </h1>
+        <p className="text-lg md:text-xl text-center text-gray-600 mb-6">
+          Vizta turns data into actionable insights, empowering confident
+          decisions, driving innovation, and achieving success.
+        </p>
+        <button
+          onClick={() => router.push("/trial")}
+          className="bg-blue-950 text-white text-lg font-medium px-6 py-3 rounded-lg shadow-md hover:bg-blue-500 transition"
+        >
+          Get started
+        </button>
+        <p className="text-sm text-gray-500 mt-4">
+          POWERING INSIGHTS FOR GROWING TEAMS.
+        </p>
+        <div className="flex justify-center space-x-1 mt-2">
+          {[...Array(5)].map((_, i) => (
+            <span key={i} className="text-blue-500 text-lg">
+              ★
+            </span>
+          ))}
         </div>
 
-        {/* Visual Section */}
-        <div className="relative w-full max-w-[800px]  lg:left-[14%] lg:top-[10%] mt-10 lg:mt-0">
-          <motion.img
-            src="./image/dataaaa.gif"
-            alt="Laptop and Mobile"
-            className="w-full h-auto"
-            animate={{
-              y: [0, -10, 0], // Move up and down
-            }}
-            transition={{
-              duration: 2,
-              ease: "easeInOut",
-              repeat: Infinity, // Keep repeating the animation
-            }}
-          />
+        <div className="flex flex-wrap justify-center mt-6 space-x-2 space-y-2">
+          {[
+            "Interactive Data Visualizations",
+            "Accurate statistical analysis",
+            "Excel and SPSS support",
+            "Data Cleaning for Visual Accuracy",
+            "Customizable Charts and Graphs",
+            "Advanced Dashboard Creation",
+          ].map((item, index) => (
+            <span
+              key={index}
+              className="border border-gray-300 rounded-full px-4 py-2 text-sm text-gray-600"
+            >
+              {item}
+            </span>
+          ))}
         </div>
-      </main>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 w-full max-w-4xl">
+          <div className="text-center">
+            <h2 className="text-xl font-semibold text-blue-950 mb-2">
+              Visualizations
+            </h2>
+            <p className="text-gray-600">
+              Automatically create interactive data visualizations
+            </p>
+            <a href="contact" className="text-blue-600 mt-2 inline-block">
+              Generate visualizations now →
+            </a>
+          </div>
+
+          <div className="text-center">
+            <h2 className="text-xl font-semibold text-gray-800 mb-2">
+              Insights
+            </h2>
+            <p className="text-gray-600">
+              Chat with your data and uncover actionable insights
+            </p>
+          </div>
+
+          <div className="text-center">
+            <h2 className="text-xl font-semibold text-gray-800 mb-2">
+              Analysis
+            </h2>
+            <p className="text-gray-600">
+              Perform complex analysis and generate predictive insights
+            </p>
+          </div>
+        </div>
+      </div>
 
       <section
         id="features-2"
@@ -402,8 +435,3 @@ const Main = () => {
 };
 
 export default Main;
-
-
-
-
-

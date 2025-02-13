@@ -64,54 +64,86 @@ const Main = () => {
 
   return (
     <>
-      <main
-        className="flex flex-col min-h-screen lg:flex-row items-center justify-between px-6 lg:px-60 py-20 pt-40 bg-gradient-to-r from-blue-50 to-white via-blue-50"
-        data-aos="fade-up"
+          <div
+        className="flex flex-col items-center text-center p-6 md:p-12"
         style={{
           background:
             "linear-gradient(136deg, rgba(235, 248, 255, 0.5) 50%, #ffffff 50%)",
         }}
       >
-        {/* Text Section */}
-        <div className="text-center lg:text-left max-w-md lg:right-[14%]">
-          <h1 className="text-xl lg:text-[2rem] mb-2 font-bold ">
-            Data Visualized
-          </h1>
-          <h2 className="text-xl lg:text-[2rem] mb-6  font-bold">
-            Decisions Amplified
-          </h2>
-
-          <p className="text-lg text-gray-700 mb-6 ">
-            Great decisions start with reliable data. Vizta transforms
-            information into actionable insights, empowering you to make
-            confident choices and achieve extraordinary results. Unlock clarity,
-            innovation, and success with Vizta.
-          </p>
-          <button
-            onClick={() => navigate("/getstarted")}
-            className="px-8 py-2 bg-blue-950 hover:bg-blue-700 text-white rounded text-lg "
-          >
-            Get Started
-          </button>
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 pt-32 ">
+          Data Visualized{" "}
+          <span className="text-bkue-950"> Decisions Amplified</span>
+        </h1>
+        <p className="text-gray-600 text-lg md:text-xl mt-4 max-w-2xl">
+          Great decisions start with reliable data. Vizta transforms information
+          into actionable insights, empowering you to make confident choices and
+          achieve extraordinary results. Unlock clarity, innovation, and success
+          with Vizta.
+        </p>
+        <button
+          onClick={() => router.push("/trial")}
+          className="mt-6 bg-blue-950 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-semibold"
+        >
+          Get started
+        </button>
+        <p className="mt-4 text-gray-500 text-sm">
+          JOIN THOUSANDS OF DATA ENTHUSIASTS WITH VIZTA
+        </p>
+        <div className="flex gap-1 mt-2">
+          {[...Array(5)].map((_, i) => (
+            <span key={i} className="text-purple-500 text-lg">
+              ★
+            </span>
+          ))}
         </div>
-
-        {/* Visual Section */}
-        <div className="relative w-full max-w-[800px]  lg:left-[14%] lg:top-[10%] mt-10 lg:mt-0">
-          <motion.img
-            src="./image/dataaaa.gif"
-            alt="Laptop and Mobile"
-            className="w-full h-auto"
-            animate={{
-              y: [0, -10, 0], // Move up and down
-            }}
-            transition={{
-              duration: 2,
-              ease: "easeInOut",
-              repeat: Infinity, // Keep repeating the animation
-            }}
-          />
+        <div className="flex flex-wrap justify-center gap-2 mt-6">
+          {[
+            "Transform Raw Data into Stunning Visuals",
+            " - Unlock Actionable Insights with Charts & Graphs",
+            " - Seamless Integration with Excel & SPSS",
+            "  - AI-Driven Data Cleaning & Refinement",
+            " - Predictive Analytics Made Simple",
+            " - Secure & Scalable Visualization Environment",
+          ].map((feature, i) => (
+            <span
+              key={i}
+              className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm border border-gray-300"
+            >
+              {feature}
+            </span>
+          ))}
         </div>
-      </main>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 w-full max-w-5xl">
+          <div className="text-center">
+            <span className="text-purple-500 text-3xl">✨</span>
+            <h3 className="text-xl font-semibold mt-2">Visualizations</h3>
+            <p className="text-gray-600 text-sm mt-2">
+              Automatically create interactive data visualizations.
+            </p>
+            <a
+              href="#"
+              className="text-purple-500 font-medium mt-2 inline-block"
+            >
+              Generate visualizations now →
+            </a>
+          </div>
+          <div className="text-center">
+            <span className="text-gray-700 text-3xl">💡</span>
+            <h3 className="text-xl font-semibold mt-2">Insights</h3>
+            <p className="text-gray-600 text-sm mt-2">
+              Chat with your data and uncover actionable insights.
+            </p>
+          </div>
+          <div className="text-center">
+            <span className="text-gray-700 text-3xl">📈</span>
+            <h3 className="text-xl font-semibold mt-2">Analysis</h3>
+            <p className="text-gray-600 text-sm mt-2">
+              Perform complex analysis and generate predictive insights.
+            </p>
+          </div>
+        </div>
+      </div>
 
       <section
         id="features-2"

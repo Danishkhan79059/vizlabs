@@ -50,89 +50,80 @@ const page = () => {
   return (
     <>
       <div
-        className=" text-black pt-40"
+        className="text-black pt-40 min-h-screen bg-cover bg-center"
         style={{
           background:
-            "linear-gradient(rgba(235, 248, 255, 0.5) 50%, #ffffff 50%)",
+            "linear-gradient(136deg, rgba(235, 248, 255, 0.5) 50%, #ffffff 50%)",
+          // backgroundImage: "url('./image/dan.jpg')",
         }}
+        // style={{
+        //   backgroundImage: "url('./image/5024152.jpg')",
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center",
+        // }}
       >
-        {/* Header Section */}
-        <section className="px-6 md:px-20 py-10 text-center md:text-left ml-[10%]">
-          <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-            "Revolutionizing Data Visualization with Vizta"
-          </h1>
-          <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto md:mx-0">
-            Great insights don’t happen in isolation. That’s why Vizta offers
-            end-to-end data visualization solutions that are miles ahead of
-            traditional tools. By seamlessly transforming complex datasets into
-            clear, interactive visuals, Vizta empowers you to explore, analyze,
-            and share insights with unparalleled ease and precision.
-          </p>
-        </section>
-
-        {/* Mission Section */}
-        <section className="px-6 md:px-20 py-10 text-blue-900 text-center md:text-left ml-[10%]">
-          <h2 className="text-2xl md:text-4xl font-bold max-w-3xl mx-auto">
-            "Vizta: Turning Complex Data into Clarity."
-          </h2>
-          <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto md:mx-0">
-            Vizta takes data visualization to the next level, offering tailored
-            solutions to meet your needs, no matter where you start. Whether
-            you're an individual exploring insights or part of a large team
-            driving decisions through complex data workflows, Vizta empowers you
-            with clear, compelling visualizations. From interactive dashboards
-            to dynamic charts, Vizta transforms raw data into actionable
-            insights, helping you unlock new opportunities and make informed
-            decisions with confidence.
-          </p>
-        </section>
-      </div>
-      <div className=" text-black py-10 px-6 md:px-20">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
-          {/* Mission Section */}
-          <div>
-            <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
-            <p className="text-lg leading-relaxed">
-              At Vizta, our mission is to transform raw data into actionable
-              insights, empowering teams and individuals to make confident,
-              informed decisions. We provide a cutting-edge suite of tools
-              designed to seamlessly visualize complex datasets, turning numbers
-              into narratives and insights into impactful actions. Our platform
-              is tailored for modern data-driven organizations, offering
-              advanced capabilities that amplify decision-making at every level.
-              Whether you are a business analyst, a decision-maker, or part of a
-              collaborative data team, Vizta enables you to uncover
-              opportunities, identify trends, and drive innovation with
-              precision and clarity. With Vizta, raw data is no longer
-              overwhelming—it’s an asset. We strive to simplify the complexity
-              of information, offering intuitive data visualization,
-              user-friendly workflows, and dynamic dashboards that adapt to your
-              needs. Together, we unlock the potential of your data, amplifying
-              decisions and fueling your journey toward success.
+        {/* Content Wrapper */}
+        <div className=" bg-opacity-80 py-10 px-6 md:px-20">
+          {/* Header Section */}
+          <section className="text-center md:text-left max-w-6xl mx-auto">
+            <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+              "Revolutionizing Data Visualization with Vizta"
+            </h1>
+            <p className="mt-4 text-lg md:text-xl">
+              Great insights don’t happen in isolation. That’s why Vizta offers
+              end-to-end data visualization solutions that are miles ahead of
+              traditional tools. By seamlessly transforming complex datasets
+              into clear, interactive visuals, Vizta empowers you to explore,
+              analyze, and share insights with unparalleled ease and precision.
             </p>
-          </div>
+          </section>
 
-          {/* Stats Section */}
-          <div className="grid grid-cols-2 gap-6">
-            {/* Stat 1 */}
-            <div className="flex items-center space-x-4">
-              <div className="bg-pink-500 rounded-full p-4">
-                <FaLocationDot />
-              </div>
-              <div>
-                <p className="text-3xl font-bold">1</p>
-                <p className="uppercase text-sm">Locations</p>
-              </div>
+          {/* Mission Section */}
+          <section className="text-center md:text-left text-blue-900 max-w-6xl mx-auto mt-10">
+            <h2 className="text-2xl md:text-4xl font-bold">
+              "Vizta: Turning Complex Data into Clarity."
+            </h2>
+            <p className="mt-4 text-lg md:text-xl">
+              Vizta takes data visualization to the next level, offering
+              tailored solutions to meet your needs, no matter where you start.
+              Whether you're an individual exploring insights or part of a large
+              team, Vizta empowers you with clear, compelling visualizations.
+            </p>
+          </section>
+
+          {/* Mission & Stats Section */}
+          <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto mt-10">
+            {/* Mission */}
+            <div>
+              <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
+              <p className="text-lg leading-relaxed">
+                At Vizta, our mission is to transform raw data into actionable
+                insights, empowering teams and individuals to make confident,
+                informed decisions. We provide cutting-edge tools designed to
+                seamlessly visualize complex datasets, turning numbers into
+                narratives and insights into impactful actions.
+              </p>
             </div>
 
-            {/* Stat 2 */}
-            <div className="flex items-center space-x-4">
-              <div className="bg-pink-500 rounded-full p-4">
-                <MdEmojiEmotions />
+            {/* Stats */}
+            <div className="grid grid-cols-2 gap-6">
+              <div className="flex items-center space-x-4">
+                <div className="bg-pink-500 rounded-full p-4 text-white">
+                  <FaLocationDot size={24} />
+                </div>
+                <div>
+                  <p className="text-3xl font-bold">1</p>
+                  <p className="uppercase text-sm">Locations</p>
+                </div>
               </div>
-              <div>
-                <p className="text-3xl font-bold">9+</p>
-                <p className="uppercase text-sm">Employees</p>
+              <div className="flex items-center space-x-4">
+                <div className="bg-pink-500 rounded-full p-4 text-white">
+                  <MdEmojiEmotions size={24} />
+                </div>
+                <div>
+                  <p className="text-3xl font-bold">9+</p>
+                  <p className="uppercase text-sm">Employees</p>
+                </div>
               </div>
             </div>
           </div>

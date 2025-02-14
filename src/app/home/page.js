@@ -1,5 +1,4 @@
-
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -18,7 +17,7 @@ import { GoDatabase } from "react-icons/go";
 import { PiMicrosoftTeamsLogoLight } from "react-icons/pi";
 
 const Main = () => {
-    const router = useRouter();
+  const router = useRouter();
   useEffect(() => {
     AOS.init({
       duration: 1500,
@@ -64,7 +63,7 @@ const Main = () => {
 
   return (
     <>
-          <div
+      <div
         className="flex flex-col items-center text-center p-6 md:p-12"
         style={{
           background:
@@ -73,7 +72,7 @@ const Main = () => {
       >
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 pt-32 ">
           Data Visualized{" "}
-          <span className="text-bkue-950"> Decisions Amplified</span>
+          <span className="text-blue-600"> Decisions Amplified</span>
         </h1>
         <p className="text-gray-600 text-lg md:text-xl mt-4 max-w-2xl">
           Great decisions start with reliable data. Vizta transforms information
@@ -92,7 +91,7 @@ const Main = () => {
         </p>
         <div className="flex gap-1 mt-2">
           {[...Array(5)].map((_, i) => (
-            <span key={i} className="text-purple-500 text-lg">
+            <span key={i} className="text-blue-950 text-lg">
               ★
             </span>
           ))}
@@ -100,15 +99,15 @@ const Main = () => {
         <div className="flex flex-wrap justify-center gap-2 mt-6">
           {[
             "Transform Raw Data into Stunning Visuals",
-            " - Unlock Actionable Insights with Charts & Graphs",
-            " - Seamless Integration with Excel & SPSS",
-            "  - AI-Driven Data Cleaning & Refinement",
-            " - Predictive Analytics Made Simple",
-            " - Secure & Scalable Visualization Environment",
+            "Unlock Actionable Insights with Charts & Graphs",
+            "Seamless Integration with Excel & SPSS",
+            "AI-Driven Data Cleaning & Refinement",
+            "Predictive Analytics Made Simple",
+            "Secure & Scalable Visualization Environment",
           ].map((feature, i) => (
             <span
               key={i}
-              className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm border border-gray-300"
+              className="px-4 py-2 bg-blue-950 text-white rounded-full text-sm border border-gray-300"
             >
               {feature}
             </span>

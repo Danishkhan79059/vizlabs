@@ -52,7 +52,7 @@ const Header = () => {
             href="home"
             className={`${
               activeLink === "home" ? "text-blue-700" : "hover:text-blue-700"
-            } py-2 md:py-0`}
+            } py-2 md:py-0 font-semibold`}
             onClick={() => handleLinkClick("home")}
           >
             Home
@@ -61,7 +61,7 @@ const Header = () => {
             href="/about"
             className={`${
               activeLink === "aboutus" ? "text-blue-700" : "hover:text-blue-700"
-            } py-2 md:py-0`}
+            } py-2 md:py-0 font-semibold`}
             onClick={() => handleLinkClick("aboutus")}
           >
             About
@@ -70,7 +70,7 @@ const Header = () => {
             href="/pricing"
             className={`${
               activeLink === "pricing" ? "text-blue-700" : "hover:text-blue-700"
-            } py-2 md:py-0`}
+            } py-2 md:py-0 font-semibold`}
             onClick={() => handleLinkClick("pricing")}
           >
             Pricing
@@ -81,7 +81,7 @@ const Header = () => {
               activeLink === "/contact"
                 ? "text-blue-700"
                 : "hover:text-blue-700"
-            } py-2 md:py-0`}
+            } py-2 md:py-0 font-semibold`}
             onClick={() => handleLinkClick("/contact")}
           >
             Contact us
@@ -92,7 +92,7 @@ const Header = () => {
               activeLink === "viztablog"
                 ? "text-blue-700"
                 : "hover:text-blue-700"
-            } py-2 md:py-0`}
+            } py-2 md:py-0 font-semibold`}
             onClick={() => handleLinkClick("viztablog")}
           >
             Blog

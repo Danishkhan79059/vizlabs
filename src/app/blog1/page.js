@@ -42,11 +42,11 @@ const page = () => {
             <p className="text-gray-600 mt-6 text-lg">
               **Vizta** is a cutting-edge Business Intelligence (BI) tool
               designed to revolutionize how businesses analyze and interpret
-              data. By incorporating **Tau**, we empower organizations to go
+              data. By incorporating Tau, we empower organizations to go
               beyond traditional reporting, using AI to offer personalized,
               interactive insights. Whether you're a small startup or a large
               enterprise, Vizta with Tau can adapt to your unique needs, turning
-              complex datasets into actionable visual narratives.
+              complex datasets into actionable visual
             </p>
             <div className="flex items-center mt-6 md:mt-8">
               <img

@@ -97,6 +97,7 @@ function page() {
     try {
       const response = await fetch(
         "https://demojsbackend.vizlabs.in/contactusForm/contactus",
+        // "http://localhost:3002/contactusForm/contactus",
         {
           method: "POST",
           headers: {

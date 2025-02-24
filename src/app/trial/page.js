@@ -82,7 +82,7 @@ const page = () => {
     try {
       const response = await fetch(
         "https://demojsbackend.vizlabs.in/register/website",
-        // "http://localhost:3002/register/website",
+        // "http://localhost:3500/register/website",
         {
           method: "POST",
           headers: {

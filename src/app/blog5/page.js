@@ -86,7 +86,7 @@ const page = () => {
         <h3 className="text-xl font-semibold text-gray-800 mt-8">
           Key Features of Vizta’s Data Integration:
         </h3>
-        
+
         <ul className="list-disc pl-6 mt-4 text-gray-600">
           <li>
             Connect with various data sources like MySQL, APIs, and cloud

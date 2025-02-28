@@ -2,8 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { FaChevronUp } from "react-icons/fa";
-import { FaUser, FaEnvelope, FaPhone, FaUsers } from "react-icons/fa";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -14,7 +12,7 @@ const PricingCard = ({
   features,
   gradient,
   isPopular,
-  aos,
+
   delay,
   defaultPricing,
 }) => {
@@ -89,7 +87,7 @@ const page = () => {
         "These capabilities are included in specific Vizta plans. Contact sales for more details.",
     },
   ];
-  console.log(defaultPricing);
+
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
@@ -123,7 +121,6 @@ const page = () => {
           <button
             onClick={() => {
               setDefaultPricing("monthly");
-              console.log("monthly");
             }}
             className={`px-6 py-3 text-black font-semibold rounded-lg transition duration-300 cursor-pointer ${
               defaultPricing === "monthly"
@@ -137,7 +134,6 @@ const page = () => {
           <button
             onClick={() => {
               setDefaultPricing("year");
-              console.log("year");
             }}
             className={`px-6 py-3 text-black font-semibold rounded-lg transition duration-300 cursor-pointer ${
               defaultPricing === "year"

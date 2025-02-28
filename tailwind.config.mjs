@@ -14,10 +14,10 @@ export default {
         "soft-blue": "#DEEDFD",
         "soft-green": "#D5F1E4",
         "soft-pink": "#FDEDED",
-        "blush-rose": "#F28484", // Previously customPink
-        "mint-meadow": "#48C88A", // Previously customGreen
-        "skyline-blue": "#20A5F8", // Previously customBlue
-        "golden-peach": "#EDB86E", // Previously customOrange
+        "blush-rose": "#F28484", 
+        "mint-meadow": "#48C88A", 
+        "skyline-blue": "#20A5F8", 
+        "golden-peach": "#EDB86E", 
       },
       backgroundImage: {
         "custom-gradient":

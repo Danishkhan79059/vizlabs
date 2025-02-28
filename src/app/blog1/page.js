@@ -1,12 +1,10 @@
 "use client";
 import React from "react";
 import { IoArrowBack } from "react-icons/io5";
-// import { useNavigate } from "react-router";
 import { useRouter } from "next/navigation";
 import Head from "next/head";
 
 const page = () => {
-  // const navigate = useNavigate();
   const router = useRouter();
   const pageTitle = "Aritificial Intelligence";
   return (
@@ -42,11 +40,11 @@ const page = () => {
             <p className="text-gray-600 mt-6 text-lg">
               **Vizta** is a cutting-edge Business Intelligence (BI) tool
               designed to revolutionize how businesses analyze and interpret
-              data. By incorporating Tau, we empower organizations to go
-              beyond traditional reporting, using AI to offer personalized,
-              interactive insights. Whether you're a small startup or a large
-              enterprise, Vizta with Tau can adapt to your unique needs, turning
-              complex datasets into actionable visual
+              data. By incorporating Tau, we empower organizations to go beyond
+              traditional reporting, using AI to offer personalized, interactive
+              insights. Whether you're a small startup or a large enterprise,
+              Vizta with Tau can adapt to your unique needs, turning complex
+              datasets into actionable visual
             </p>
             <div className="flex items-center mt-6 md:mt-8">
               <img

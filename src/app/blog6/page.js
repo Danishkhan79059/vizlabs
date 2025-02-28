@@ -1,10 +1,13 @@
 "use client";
 import React from "react";
 import { IoArrowBack } from "react-icons/io5";
-import { useRouter } from "next/navigation";
+import {useRouter} from "next/navigation";
+
+
 
 const page = () => {
-  const router = useRouter();
+ const router = useRouter();
+  
   return (
     <>
       <div className="min-h-screen py-10 pt-40">

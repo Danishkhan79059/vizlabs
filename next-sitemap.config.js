@@ -1,13 +1,10 @@
-
 /** @type {import('next-sitemap').IConfig} */
-
 module.exports = {
   siteUrl: "https://vizta.in",
   changefreq: "daily",
   priority: 0.7,
   sitemapSize: 5000,
   generateRobotsTxt: true,
-  exclude: ["/protected-page", "/awesome/secret-page"],
   alternateRefs: [
     {
       href: "https://vizta.in/home",
@@ -21,7 +18,7 @@ module.exports = {
   // Default transformation function
   transform: async (config, path) => {
     return {
-      loc: path, // => this will be exported as http(s)://<config.siteUrl>/<path>
+      loc: path,
       changefreq: config.changefreq,
       priority: config.priority,
       lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
@@ -33,18 +30,7 @@ module.exports = {
   ],
   robotsTxtOptions: {
     policies: [
-      {
-        userAgent: "*",
-        allow: "/",
-      },
-      {
-        userAgent: "test-bot",
-        allow: ["/path", "/path-2"],
-      },
-      {
-        userAgent: "black-listed-bot",
-        disallow: ["/sub-path-1", "/path-2"],
-      },
+      { userAgent: "*", allow: "/" }, // Allow all bots to crawl
     ],
     additionalSitemaps: [
       "https://vizta.in/home", // Custom sitemap URLs

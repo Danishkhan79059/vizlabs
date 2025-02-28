@@ -46,7 +46,7 @@ const page = () => {
       link: "/blog3",
     },
     {
-      id: 6,
+      id: 4,
       image:
         "https://www.rapidionline.com/hs-fs/hubfs/common-data-integration-techniques.png?width=1000&height=740&name=common-data-integration-techniques.png",
       title: "How Vizta Integrates with Your Data Sources",
@@ -68,7 +68,7 @@ const page = () => {
       link: "/blog6",
     },
     {
-      id: 4,
+      id: 6,
       image: "./image/vt.webp",
       title: "Vizta vs. Tableau: Which One is Right for You?",
       author: "Mohit Panwar",
@@ -77,7 +77,6 @@ const page = () => {
         "A detailed comparison of Vizta and Tableau to help you choose the right tool for your needs.",
       link: "/blog4",
     },
-    
   ];
 
   const handleLoadMore = () => {

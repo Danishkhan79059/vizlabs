@@ -1,8 +1,6 @@
 "use client";
-
 import React from "react";
 import { motion } from "framer-motion";
-// import { FaLinkedin } from "react-icons/fa";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmojiEmotions } from "react-icons/md";
@@ -12,38 +10,38 @@ const page = () => {
     {
       id: 1,
       name: "Gopal krishna Basudevan",
-      image: "/image/Gopal.png", // Replace with the actual image URL
+      image: "/image/Gopal.png", 
       position: "Backend Developer",
       linkedin:
-        "https://www.linkedin.com/in/gopal-krishna-basudevan-7b161215b/", // Add the LinkedIn profile link
+        "https://www.linkedin.com/in/gopal-krishna-basudevan-7b161215b/", 
     },
     {
       id: 2,
       name: "Parag Aggarwal",
-      image: "/image/Parag.png", // Replace with the actual image URL
+      image: "/image/Parag.png", 
       position: "Frontend Developer",
-      linkedin: "https://www.linkedin.com/in/parag-aggarwal01/", // Add the LinkedIn profile link
+      linkedin: "https://www.linkedin.com/in/parag-aggarwal01/", 
     },
     {
       id: 3,
       name: "Danish khan",
-      image: "/image/Danish.png", // Replace with the actual image URL
+      image: "/image/Danish.png", 
       position: "Frontend Developer",
-      linkedin: "https://www.linkedin.com/in/danishkhan786/", // Add the LinkedIn profile link
+      linkedin: "https://www.linkedin.com/in/danishkhan786/",
     },
     {
       id: 4,
       name: "Manav panwar",
-      image: "/image/Manav.png", // Replace with the actual image URL
+      image: "/image/Manav.png", 
       position: "AI Integration",
-      linkedin: "https://www.linkedin.com/in/manav-panwar-031213179/", // Add the LinkedIn profile link
+      linkedin: "https://www.linkedin.com/in/manav-panwar-031213179/", 
     },
     {
       id: 5,
       name: "Neha verma",
-      image: "/image/Neha.png", // Replace with the actual image URL
+      image: "/image/Neha.png", 
       position: "Frontend Developer",
-      linkedin: "https://www.linkedin.com/in/neha-verma18g/", // Add the LinkedIn profile link
+      linkedin: "https://www.linkedin.com/in/neha-verma18g/",
     },
   ];
 

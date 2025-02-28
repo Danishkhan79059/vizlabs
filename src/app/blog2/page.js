@@ -230,13 +230,10 @@ const page = () => {
           </li>
         </ul>
         <img
-          src="/image/chart8.png" // Replace with actual interactive charts image
+          src="/image/chart8.png"
           alt="Interactive Charts for Data Analysis"
           className="w-full max-w-full mx-auto rounded-2xl mt-6"
         />
-
-        {/* More Sections */}
-        {/* You can continue to add more sections here in a similar way, following the pattern above */}
       </div>
     </div>
   );

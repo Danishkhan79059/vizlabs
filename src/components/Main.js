@@ -1,9 +1,7 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { motion } from "framer-motion";
-
 import { useRouter } from "next/navigation";
 import { LuDatabase } from "react-icons/lu";
 import { MdOutlineDashboard } from "react-icons/md";
@@ -75,7 +73,7 @@ const Main = () => {
           Data Visualized{" "}
           <span className="text-blue-500"> Decisions Amplified</span>
         </h1>
-        <p className="text-gray-600 text-lg md:text-xl mt-4 max-w-2xl">
+        <p className="text-gray-600 text-sm md:text-xl mt-4 max-w-2xl">
           Great decisions start with reliable data. Vizta transforms information
           into actionable insights, empowering you to make confident choices and
           achieve extraordinary results. Unlock clarity, innovation, and success
@@ -91,12 +89,13 @@ const Main = () => {
           JOIN THOUSANDS OF DATA ENTHUSIASTS WITH VIZTA
         </p>
         <div className="flex gap-1 mt-2">
-          {[...Array(5)].map((_, i) => (
+          {Array.from({ length: 5 }).map((_, i) => (
             <span key={i} className="text-blue-950 text-lg">
-              ★
+              &#9733;
             </span>
           ))}
         </div>
+
         <div className="flex flex-wrap justify-center gap-2 mt-6">
           {[
             "Transform Raw Data into Stunning Visuals",
@@ -122,8 +121,8 @@ const Main = () => {
               Automatically create interactive data visualizations.
             </p>
             <a
-              href="#"
-              className="text-purple-500 font-medium mt-2 inline-block"
+              onClick={() => router.push("/contact")}
+              className="text-blue-800 font-medium mt-2 inline-block cursor-pointer"
             >
               Generate visualizations now →
             </a>
@@ -391,7 +390,7 @@ const Main = () => {
         <div className="w-full max-w-2xl aspect-video">
           <iframe
             className="w-full h-full border-none rounded-lg"
-            src="https://www.youtube.com/embed/ZjMnIMtSn_s" // Replace with your video link
+            src="https://res.cloudinary.com/dccfiolig/video/upload/v1740637212/Screen_Recording_2025-01-31_165820_rwc8gw.mp4" // Replace with your video link
             title="Introduction Video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

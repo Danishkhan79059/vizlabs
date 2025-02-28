@@ -97,7 +97,6 @@ function page() {
     try {
       const response = await fetch(
         "https://demojsbackend.vizlabs.in/contactusForm/contactus",
-        // "http://localhost:3002/contactusForm/contactus",
         {
           method: "POST",
           headers: {
@@ -108,7 +107,6 @@ function page() {
       );
 
       if (response.ok) {
-        console.log("Message sent successfully!");
         setFormStatus(
           "Thank you! We’ve received your details and will contact you shortly."
         );
@@ -120,11 +118,9 @@ function page() {
           comment: "",
         });
       } else {
-        console.log("Error sending message.!");
       }
     } catch (error) {
       setFormStatus("Error occurred while submitting the form.");
-      console.error("Error:", error);
     } finally {
       setIsSubmitting(false);
     }

@@ -119,7 +119,7 @@ const Header = () => {
           <div className="relative">
             <button
               className="px-2 py-1 bg-blue-950 rounded-md hover:bg-blue-700 text-white flex"
-              onClick={() => window.open("https://app.vizta.in/", "_blank")}
+              onClick={() => window.open("https://demo.vizta.in/", "_blank")}
             >
               Login
             </button>

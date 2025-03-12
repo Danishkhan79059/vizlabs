@@ -90,6 +90,82 @@ export default function RootLayout({ children }) {
 
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
+
+        {/* JSON-LD Structured Data for Google Sitelinks */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Vizta",
+            url: "https://vizta.in",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: "https://vizta.in/search?q={search_term_string}",
+              "query-input": "required name=search_term_string",
+            },
+            about:
+              "Vizta is a data visualization platform for business intelligence.",
+            mainEntity: [
+              {
+                "@type": "WebPage",
+                name: "Sign in to Vizta Platform",
+                url: "https://app.vizta.in/",
+              },
+              {
+                "@type": "WebPage",
+                name: "About Vizta",
+                url: "https://vizta.in/about",
+              },
+              {
+                "@type": "WebPage",
+                name: "Subscription Pricing and Plans",
+                url: "https://vizta.in/pricing",
+              },
+              {
+                "@type": "WebPage",
+                name: "Get in Touch with Vizta Support",
+                url: "https://vizta.in/contact",
+              },
+            ],
+          })}
+        </script>
+
+        {/* JSON-LD Structured Data for Organization */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Vizta",
+            url: "https://vizta.in",
+            logo: "https://vizta.in/about",
+            sameAs: [
+              "https://x.com/vizlabsindia",
+              "https://www.linkedin.com/company/99248254/admin/dashboard/",
+            ],
+          })}
+        </script>
+
+        {/* JSON-LD Breadcrumb Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://vizta.in",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: "Pricing",
+                item: "https://vizta.in/pricing",
+              },
+            ],
+          })}
+        </script>
       </Head>
 
       <body

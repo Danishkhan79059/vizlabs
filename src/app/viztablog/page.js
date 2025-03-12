@@ -54,7 +54,7 @@ const page = () => {
       date: "January 7, 2025",
       excerpt:
         "Seamlessly connect Vizta with your databases and APIs for real-time data insights.",
-      link: "/blog5",
+      link: "/blog4",
     },
     {
       id: 5,
@@ -65,7 +65,7 @@ const page = () => {
       date: "January 8, 2025",
       excerpt:
         "Learn how to build interactive and dynamic dashboards with Vizta's intuitive interface.",
-      link: "/blog6",
+      link: "/blog5",
     },
     {
       id: 6,
@@ -75,7 +75,17 @@ const page = () => {
       date: "January 9, 2025",
       excerpt:
         "A detailed comparison of Vizta and Tableau to help you choose the right tool for your needs.",
-      link: "/blog4",
+      link: "/blog6",
+    },
+    {
+      id: 7,
+      image: "./image/vt.webp",
+      title: "The Data Revolution: From SQL to Excel to AI-Powered Business Intelligence",
+      author: "Mohit Panwar",
+      date: "March 13, 2025",
+      excerpt:
+        "A detailed comparison of Vizta and Tableau to help you choose the right tool for your needs.",
+      link: "/blog7",
     },
   ];
 

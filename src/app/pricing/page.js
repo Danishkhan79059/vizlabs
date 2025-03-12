@@ -148,7 +148,7 @@ const page = () => {
         <div className="flex flex-wrap justify-center gap-6">
           <PricingCard
             title="Viewer"
-            price={defaultPricing === "year" ? 9.9 : 9.9 + 2}
+            price={defaultPricing === "year" ? 9 : 9 + 2}
             description=""
             features={[
               "Real-time data visualization with Vizta's dynamic charts",
@@ -163,7 +163,7 @@ const page = () => {
           />
           <PricingCard
             title="Explorer"
-            price={defaultPricing === "year" ? 29.9 : 29.9 + 2}
+            price={defaultPricing === "year" ? 29 : 29 + 2}
             description=""
             features={[
               "Most popular dynamic charts to visualize your data in real-time",
@@ -179,7 +179,7 @@ const page = () => {
           />
           <PricingCard
             title="Creator"
-            price={defaultPricing === "year" ? 59.9 : 59.9 + 2}
+            price={defaultPricing === "year" ? 59 : 59 + 2}
             description=""
             features={[
               "AI-powered insights and predictive analytics for smarter decision-making",

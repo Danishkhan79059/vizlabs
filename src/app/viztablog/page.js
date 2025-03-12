@@ -79,7 +79,7 @@ const page = () => {
     },
     {
       id: 7,
-      image: "./image/connect.png",
+      image: "./image/Connect.png",
       title: "The Data Revolution: From SQL to Excel to AI-Powered Business Intelligence",
       author: "Mohit Panwar",
       date: "March 13, 2025",

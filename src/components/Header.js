@@ -21,7 +21,6 @@ const Header = () => {
         setScrolled(false);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -38,7 +37,11 @@ const Header = () => {
         {/* Logo and Hamburger for Mobile */}
         <div className="flex items-center w-full justify-between md:w-auto">
           <Link href="/" className="flex items-center ">
-            <img src="./image/viz.png" alt="Logo" className="h-10 " />
+            <img
+              src="./image/viz.png"
+              alt="Logo"
+              className="h-10 max-h-10 w-auto object-contain"
+            />
           </Link>
         </div>
         <nav

@@ -11,7 +11,7 @@ const page = () => {
         {/* Text Section */}
         <div className="md:w-1/2">
           <span className="text-blue-600 font-semibold text-sm uppercase">
-            Business Intelligence
+            Business intelligence
           </span>
           <h1 className="text-3xl font-bold text-gray-800 mt-4 md:text-4xl lg:text-5xl">
             How Vizta Integrates with Your Data Sources

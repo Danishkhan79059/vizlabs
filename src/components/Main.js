@@ -70,7 +70,7 @@ const Main = () => {
         }}
       >
         <h1 className="text-4xl md:text-6xl font-bold text-blue-950 pt-32 ">
-          Data Visualized{" "}
+          Data Visualized,
           <span className="text-blue-500"> Decisions Amplified</span>
         </h1>
         <p className="text-gray-600 text-sm md:text-xl mt-4 max-w-2xl">

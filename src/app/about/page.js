@@ -52,22 +52,17 @@ const page = () => {
         style={{
           background:
             "linear-gradient(136deg, rgba(235, 248, 255, 0.5) 50%, #ffffff 50%)",
-          // backgroundImage: "url('./image/dan.jpg')",
         }}
-        // style={{
-        //   backgroundImage: "url('./image/5024152.jpg')",
-        //   backgroundSize: "cover",
-        //   backgroundPosition: "center",
-        // }}
+    
       >
         {/* Content Wrapper */}
         <div className=" bg-opacity-80 py-10 px-6 md:px-20">
           {/* Header Section */}
           <section className="text-center md:text-left max-w-6xl mx-auto">
-            <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-              "Revolutionizing Data Visualization with Vizta"
+            <h1 className="text-2xl md:text-4xl font-bold leading-tight">
+              Revolutionizing Data Visualization with Vizta
             </h1>
-            <p className="mt-4 text-lg md:text-xl">
+            <p className="mt-4 text-sm md:text-xl">
               Great insights don’t happen in isolation. That’s why Vizta offers
               end-to-end data visualization solutions that are miles ahead of
               traditional tools. By seamlessly transforming complex datasets
@@ -78,10 +73,10 @@ const page = () => {
 
           {/* Mission Section */}
           <section className="text-center md:text-left text-blue-900 max-w-6xl mx-auto mt-10">
-            <h2 className="text-2xl md:text-4xl font-bold">
-              "Vizta: Turning Complex Data into Clarity."
+            <h2 className="text-2xl md:text-3xl font-bold">
+              Vizta: Turning Complex Data into Clarity.
             </h2>
-            <p className="mt-4 text-lg md:text-xl">
+            <p className="mt-4 text-sm md:text-xl">
               Vizta takes data visualization to the next level, offering
               tailored solutions to meet your needs, no matter where you start.
               Whether you're an individual exploring insights or part of a large

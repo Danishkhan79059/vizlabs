@@ -38,7 +38,7 @@ const Header = () => {
         <div className="flex items-center w-full justify-between md:w-auto">
           <Link href="/" className="flex items-center ">
             <img
-              src="./image/viz.png"
+              src="/image/viz.png"
               alt="Logo"
               className="h-10 max-h-10 w-auto object-contain"
             />
@@ -98,15 +98,24 @@ const Header = () => {
           >
             Blog
           </Link>
+          <Link
+            href="/trial"
+            className={`${
+              activeLink === "trial" ? "text-blue-700" : "hover:text-blue-700"
+            } py-2 md:py-0 font-semibold`}
+            onClick={() => handleLinkClick("trial")}
+          >
+            Try free
+          </Link>
 
           <button
             className="px-2 py-2 mt-2 md:py-0 bg-blue-950 hover:bg-blue-700 rounded-md text-white flex md:hidden w-[40%]"
             onClick={() => {
-              router.push("/trial");
+              router.push("/bookDemo");
               setIsMenuOpen(false);
             }}
           >
-            Try free
+            Book Demo
           </button>
         </nav>
 
@@ -114,10 +123,16 @@ const Header = () => {
         <div className="flex w-full md:w-1/2 items-center justify-end gap-2 mt-4 md:mt-0 ">
           <button
             className="px-2 py-1 bg-blue-950 rounded-md hover:bg-blue-700 text-white hidden md:flex"
+            onClick={() => router.push("/bookDemo")}
+          >
+            Book Demo
+          </button>
+          {/* <button
+            className="px-2 py-1 bg-blue-950 rounded-md hover:bg-blue-700 text-white hidden md:flex"
             onClick={() => router.push("/trial")}
           >
             Try free
-          </button>
+          </button> */}
 
           <div className="relative">
             <button

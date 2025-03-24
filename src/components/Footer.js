@@ -6,15 +6,20 @@ import {
   FaInstagram,
   FaGithub,
 } from "react-icons/fa";
+import { CiYoutube } from "react-icons/ci";
 import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
+import { TbBrandYoutube } from "react-icons/tb";
 
 function Footer() {
   return (
     <footer className="w-full bg-blue-950 text-white mt-10 py-2 text-center bottom-0 left-0">
       <div className="space-y-2">
         <div>
-          <Link href="/pricing" className="text-sm font-semibold hover:underline">
+          <Link
+            href="/pricing"
+            className="text-sm font-semibold hover:underline"
+          >
             Why Vizta?
           </Link>
         </div>
@@ -74,6 +79,14 @@ function Footer() {
             className="flex items-center space-x-2 text-white hover:text-white transition"
           >
             <FaInstagram />
+          </a>
+          <a
+            href="https://www.youtube.com/@Vizta-AI"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center space-x-2 text-white hover:text-white transition"
+          >
+            <TbBrandYoutube  />
           </a>
         </div>
         <div>

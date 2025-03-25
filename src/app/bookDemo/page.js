@@ -58,7 +58,7 @@ export default function Page() {
   useEffect(() => {
     const fetchMeetings = async () => {
       try {
-        const response = await fetch("http://localhost:3500/meeting/getAll");
+        const response = await fetch("http://demojsbackend.vizlabs.in/meeting/getAll");
         const data = await response.json();
         setMeetings(data.meetings);
       } catch (error) {
@@ -94,7 +94,7 @@ export default function Page() {
     };
 
     try {
-      const response = await fetch("http://localhost:3500/meeting/schedule", {
+      const response = await fetch("http://demojsbackend.vizlabs.in/meeting/schedule", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

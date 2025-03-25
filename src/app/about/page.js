@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmojiEmotions } from "react-icons/md";
+import Head from "next/head";
 
 const page = () => {
   const employees = [
@@ -47,13 +48,20 @@ const page = () => {
 
   return (
     <>
+      <Head>
+        <title>About Vizta | AI-Powered Data Curation & Visualization</title>
+        <meta
+          name="description"
+          content="Discover how Vizta is revolutionizing data curation with AI-powered tools. Easily manage, analyze, and visualize data for smarter decision-making."
+        />
+      </Head>
+
       <div
         className="text-black pt-40 min-h-screen bg-cover bg-center"
         style={{
           background:
             "linear-gradient(136deg, rgba(235, 248, 255, 0.5) 50%, #ffffff 50%)",
         }}
-    
       >
         {/* Content Wrapper */}
         <div className=" bg-opacity-80 py-10 px-6 md:px-20">

@@ -19,3 +19,29 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Change the background color of the current date */
+.react-calendar__tile--now {
+  background-color: #93c3ed!important; /* Change to your desired color */
+  color: white !important; /* Adjust text color if needed */
+ 
+}
+
+/* Optional: Change color on hover */
+.react-calendar__tile--now:enabled:hover {
+  background-color: #93c3ed  !important;
+}
+
+
+/* Change the background color of the selected date */
+.react-calendar__tile--active {
+  background-color: #172554 !important; /* Change to your desired color */
+  color: white !important; /* Adjust text color if needed */
+}
+
+/* Optional: Remove the default border or shadow */
+.react-calendar__tile--active:enabled:hover, 
+.react-calendar__tile--active:enabled:focus {
+  background-color: #172554 !important;
+}
+

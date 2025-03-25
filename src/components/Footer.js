@@ -6,7 +6,6 @@ import {
   FaInstagram,
   FaGithub,
 } from "react-icons/fa";
-import { CiYoutube } from "react-icons/ci";
 import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 import { TbBrandYoutube } from "react-icons/tb";

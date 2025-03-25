@@ -1,15 +1,24 @@
 "use client";
 import React from "react";
 import { IoArrowBack } from "react-icons/io5";
-import {useRouter} from "next/navigation";
-
-
+import { useRouter } from "next/navigation";
+import Head from "next/head";
 
 const page = () => {
- const router = useRouter();
-  
+  const router = useRouter();
+
   return (
     <>
+      <Head>
+        <title>
+          Creating Dynamic Dashboards with Vizta | Real-Time Data Insights
+        </title>
+        <meta
+          name="description"
+          content="Learn how to create dynamic dashboards with Vizta. Get real-time data insights, customize visualizations, and improve decision-making with AI-powered analytics."
+        />
+      </Head>
+
       <div className="min-h-screen py-10 pt-40">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
           {/* Text Section */}

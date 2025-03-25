@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import Head from "next/head";
+
 function page() {
   const [formStatus, setFormStatus] = useState("");
   const [errors, setErrors] = useState({});
@@ -128,6 +130,14 @@ function page() {
 
   return (
     <>
+      <Head>
+        <title>Contact Vizta | Get in Touch for Data Solutions & Support</title>
+        <meta
+          name="description"
+          content="Have questions about data curation? Contact Vizta for expert support and AI-driven data solutions. Let's connect and empower your business!"
+        />
+      </Head>
+
       <div className="bg-blue-50 text-black py-16 px-4 md:px-20 pt-40">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center">
           {/* Text Section */}

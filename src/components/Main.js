@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useRouter } from "next/navigation";
@@ -13,9 +13,13 @@ import { IoEyeOutline } from "react-icons/io5";
 import { IoIosLaptop } from "react-icons/io";
 import { GoDatabase } from "react-icons/go";
 import { PiMicrosoftTeamsLogoLight } from "react-icons/pi";
+import { FiPlayCircle } from "react-icons/fi";
+import { BsPlayCircleFill } from "react-icons/bs";
 
 const Main = () => {
   const router = useRouter();
+  const [showVideo, setShowVideo] = useState(false);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -62,30 +66,59 @@ const Main = () => {
   return (
     <>
       <div
-        className="flex flex-col items-center text-center p-6 md:p-12"
+        className="flex flex-col items-center text-center p-6 md:p-12 overflow-hidden"
         style={{
           background:
             "linear-gradient(136deg, rgba(235, 248, 255, 0.5) 50%, #ffffff 50%)",
-          // backgroundImage: "url('./image/dan.jpg')",
         }}
       >
-        <h1 className="text-4xl md:text-6xl font-bold text-blue-950 pt-32 ">
+        relative group w-96 h-56 flex items-center justify-center bg-white
+        border-2 rounded-lg overflow-hidden cursor-pointer
+        <h1 className="text-4xl md:text-6xl font-bold text-blue-950 pt-32">
           Data Visualized,
           <span className="text-blue-500"> Decisions Amplified</span>
         </h1>
-        <p className="text-gray-600 text-sm md:text-xl mt-4 max-w-2xl">
-          Great decisions start with reliable data. Vizta transforms information
-          into actionable insights, empowering you to make confident choices and
-          achieve extraordinary results. Unlock clarity, innovation, and success
-          with Vizta.
-        </p>
+        <div className="flex flex-col md:flex-row items-center gap-6 mt-4 max-w-7xl">
+          <p className="text-black text-sm md:text-xl max-w-2xl">
+            Great decisions start with reliable data. Vizta transforms
+            information into actionable insights, empowering you to make
+            confident choices and achieve extraordinary results. Unlock clarity,
+            innovation, and success with Vizta.
+          </p>
+          <div>
+            <div>
+              <button
+                onClick={() => setShowVideo(true)}
+                className="relative group w-96 h-56 flex items-center justify-center bg-white  rounded-lg overflow-hidden cursor-pointer"
+              >
+                {!showVideo ? (
+                  <>
+                    <img
+                      src="/image/Picture 1.png"
+                      alt="Video Thumbnail"
+                      className="w-full h-full object-contain"
+                    />
+                    <BsPlayCircleFill  className="absolute text-5xl" />
+                  </>
+                ) : (
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/dVSMREwAUv4?autoplay=1"
+                    title="YouTube Video"
+                    allow="autoplay; encrypted-media"
+                    allowFullScreen
+                  ></iframe>
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
         <button
           onClick={() => router.push("/trial")}
           className="mt-6 bg-blue-950 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-semibold"
         >
           Get started
         </button>
-
         <p className="mt-4 text-gray-500 text-sm">
           JOIN THOUSANDS OF DATA ENTHUSIASTS WITH VIZTA
         </p>
@@ -96,7 +129,6 @@ const Main = () => {
             </span>
           ))}
         </div>
-
         <div className="flex flex-wrap justify-center gap-2 mt-6">
           {[
             "Transform Raw Data into Stunning Visuals",
@@ -374,30 +406,32 @@ const Main = () => {
           ))}
         </div>
       </div>
-      <div
-        className="flex flex-col items-center py-10 px-4 md:px-20 "
-        data-aos="fade-up"
-      >
-        {/* Title Section */}
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-4">
-          Introduction Video
+      {/* Introduction Video */}
+      <section className="flex flex-col items-center text-center px-4 py-16 md:px-12 lg:px-20">
+        <h1 className="text-3xl md:text-5xl font-bold text-black">
+          Transform Your Data into Powerful Visual Insights
         </h1>
-        <p className="text-gray-600 text-center mb-8">
-          Watch how VIZTA seamlessly integrates self-service and embedded
-          analytics to unlock your data's potential.
+        <p className="text-black text-lg md:text-xl max-w-2xl mt-4">
+          Vizta is the ultimate data visualization tool that helps you turn
+          complex data into meaningful insights. With interactive charts,
+          dashboards, and reports, you can make data-driven decisions
+          effortlessly.
         </p>
-
-        {/* Video Section */}
-        <div className="w-full max-w-2xl aspect-video">
-          <iframe
-            className="w-full h-full border-none rounded-lg"
-            src="https://res.cloudinary.com/dccfiolig/video/upload/v1740637212/Screen_Recording_2025-01-31_165820_rwc8gw.mp4" // Replace with your video link
-            title="Introduction Video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+        <div className="mt-6 flex flex-col md:flex-row gap-4">
+          <button
+            onClick={() => router.push("/trial")}
+            className="bg-blue-950 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-700"
+          >
+            Start free trial
+          </button>
+          <button
+            onClick={() => router.push("/watchdemovideo")}
+            className="border bg-blue-950 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-700"
+          >
+            Watch demo video
+          </button>
         </div>
-      </div>
+      </section>
 
       <div className="bg-blue-50 relative flex flex-col items-center justify-center py-20 px-6 sm:px-12 lg:px-24 rounded-lg  overflow-hidden">
         {/* Background Design */}
@@ -411,8 +445,8 @@ const Main = () => {
           data-aos="fade-up"
         >
           <h2 className="text-2xl sm:text-4xl font-semibold text-black leading-snug">
-            "Creating Customer-Centric Ecosystems: The Future of Brand
-            Interaction"
+            Creating Customer-Centric Ecosystems: The Future of Brand
+            Interaction
           </h2>
           <p className="mt-4 text-black text-sm sm:text-base max-w-lg mx-auto">
             Building a customer-centric ecosystem is the key to fostering

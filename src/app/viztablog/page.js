@@ -80,7 +80,8 @@ const page = () => {
     {
       id: 7,
       image: "./image/Connect.png",
-      title: "The Data Revolution: From SQL to Excel to AI-Powered Business Intelligence",
+      title:
+        "The Data Revolution: From SQL to Excel to AI-Powered Business Intelligence",
       author: "Mohit Panwar",
       date: "March 13, 2025",
       excerpt:
@@ -159,7 +160,7 @@ const page = () => {
               className="bg-white p-6 shadow-md rounded-lg transition-shadow hover:shadow-lg"
             >
               <img
-                src={blog.image} // Assuming you have an 'image' property in the blog object
+                src={blog.image}
                 alt={blog.title}
                 className="w-full h-48 object-cover rounded-t-lg mb-4"
               />

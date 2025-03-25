@@ -18,6 +18,7 @@ export default {
         "mint-meadow": "#48C88A", 
         "skyline-blue": "#20A5F8", 
         "golden-peach": "#EDB86E", 
+        "blue-950": "#172554",
       },
       backgroundImage: {
         "custom-gradient":

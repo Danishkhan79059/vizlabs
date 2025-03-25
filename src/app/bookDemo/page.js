@@ -8,14 +8,16 @@ import "react-time-picker/dist/TimePicker.css";
 import { useSearchParams } from "next/navigation";
 
 export default function Page() {
+  const today = new Date();
   const searchParams = useSearchParams();
   // Get specific query params
   const name = searchParams.get("name") || "";
   const emails = searchParams.get("email") || "";
   const phone = searchParams.get("phoneNumber") || "";
   const countrys = searchParams.get("country") || "";
+
   //state define
-  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [selectedDate, setselectedDate] = useState(new Date());
   console.log(selectedDate);
 
   const [selectedTime, setSelectedTime] = useState(null);
@@ -32,9 +34,6 @@ export default function Page() {
   const [error, setError] = useState("");
 
   const timeSlots = [
-    "08:00 AM",
-    "08:30 AM",
-    "09:00 AM",
     "09:30 AM",
     "10:00 AM",
     "10:30 AM",
@@ -50,12 +49,15 @@ export default function Page() {
     "03:30 PM",
     "04:00 PM",
     "04:30 PM",
+    "05:00 PM",
+    "05:30 PM",
+    "06:00 PM",
   ];
 
   useEffect(() => {
     const fetchMeetings = async () => {
       try {
-        const response = await fetch("http://localhost:3500/api/meetings");
+        const response = await fetch("http://localhost:3500/meeting/getAll");
         const data = await response.json();
         setMeetings(data.meetings);
       } catch (error) {
@@ -68,6 +70,13 @@ export default function Page() {
 
     fetchMeetings();
   }, []);
+  const selectedDateUTC = new Date(
+    Date.UTC(
+      selectedDate.getFullYear(),
+      selectedDate.getMonth(),
+      selectedDate.getDate()
+    )
+  );
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -79,12 +88,12 @@ export default function Page() {
       email,
       phoneNumber,
       country,
-      selectedDate: selectedDate.toISOString().split("T")[0], // YYYY-MM-DD format
+      selectedDate: selectedDateUTC.toISOString().split("T")[0], // YYYY-MM-DD in UTC
       selectedTime, // HH:MM format
     };
 
     try {
-      const response = await fetch("http://localhost:3500/api/schedule", {
+      const response = await fetch("http://localhost:3500/meeting/schedule", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -117,7 +126,7 @@ export default function Page() {
   };
 
   // Ensure selectedDate is treated correctly
-  const targetDateISO = normalizeDate(selectedDate);
+  const targetDateISO = normalizeDate(selectedDateUTC);
 
   // Filter meetings based on the normalized date
   const selectedTimes = (meetings ?? [])
@@ -135,16 +144,16 @@ export default function Page() {
         <div className="max-w-6xl w-full bg-white rounded-3xl shadow-xlp-6 md:p-10 flex flex-col md:flex-row gap-6 pt-32">
           <div className="w-full md:w-1/2 p-6 mx-auto max-w-lg ">
             <span className="bg-gray-200 text-blue-950 px-4 py-1 rounded-full text-sm font-bold">
-              Lets connect to Vizta
+              Let's connect
             </span>
             <h1 className="text-3xl md:text-4xl font-bold mt-6 leading-tight text-center">
-              Vizta: Seamless Meeting Scheduling for Your Business
+              Let us showcase how we can help you
             </h1>
             <p className="text-gray-600 mt-4 text-base text-center">
-              Vizta makes scheduling meetings effortless for individuals, teams,
-              and businesses. Whether you're coordinating with clients, managing
-              internal team discussions, or setting up recurring meetings, Vizta
-              provides a fully customizable and automated solution.
+              Experience the power of vizta with a personalized demo tailored to
+              your needs. Schedule a session with our experts to explore key
+              features and see how we can help you achieve your goals. Book your
+              demo today and take the first step toward smarter solutions!
             </p>
 
             <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
@@ -181,7 +190,7 @@ export default function Page() {
               />
               <button
                 type="submit"
-                className="relative w-full mt-4 py-3 bg-blue-950 text-white rounded-lg text-lg font-semibold shadow-md transition-transform transform hover:scale-105"
+                className="relative w-full mt-4 py-3 bg-blue-950 text-white rounded-lg text-lg font-semibold  transition-transform transform hover:scale-105"
                 disabled={loading}
               >
                 {loading ? (
@@ -221,7 +230,7 @@ export default function Page() {
             )}
           </div>
           {/* Right Side */}
-          <div className="w-full md:w-1/2 p-4 bg-gray-100 rounded-3xl shadow-md pt-10">
+          <div className="w-full md:w-1/2 p-4 bg-white rounded-3xl  pt-10">
             <div className="flex items-center gap-3">
               <Image
                 src="/image/Mohit.png"
@@ -243,15 +252,25 @@ export default function Page() {
               <span>🌍 Online </span>
             </div>
             <h3 className="text-lg font-bold mt-4">Select Date</h3>
-            <div className="mt-3 bg-white p-3 rounded-lg shadow">
-              <Calendar onChange={setSelectedDate} value={selectedDate} />
+            <div className="flex justify-center items-center mt-3">
+              <div className="bg-white p-3 rounded-lg  w-fit">
+                <Calendar
+                  onChange={setselectedDate}
+                  value={selectedDateUTC}
+                  prev2Label={null}
+                  next2Label={null}
+                  prevLabel={null}
+                  nextLabel={null}
+                  minDate={today}
+                />
+              </div>
             </div>
-            {selectedDate && (
+            {selectedDateUTC && (
               <>
                 <h3 className="text-md md:text-lg font-bold mt-4">
                   Select Time
                 </h3>
-                <div className="mt-3 bg-white p-3 md:p-4 rounded-lg shadow grid grid-cols-2 md:grid-cols-3 gap-2">
+                <div className="mt-3 bg-white p-3 md:p-4 rounded-lg  grid grid-cols-2 md:grid-cols-3 gap-2">
                   {timeSlots.map((time) => (
                     <button
                       key={time}

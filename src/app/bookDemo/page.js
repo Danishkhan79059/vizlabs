@@ -11,10 +11,10 @@ export default function Page() {
   const today = new Date();
   // const searchParams = useSearchParams();
   // Get specific query params
-  const name = searchParams.get("name") 
-  const emails = searchParams.get("email")
-  const phone = searchParams.get("phoneNumber") 
-  const countrys = searchParams.get("country") 
+  // const name = searchParams.get("name") 
+  // const emails = searchParams.get("email")
+  // const phone = searchParams.get("phoneNumber") 
+  // const countrys = searchParams.get("country") 
   
 
   //state define
@@ -24,11 +24,11 @@ export default function Page() {
   const [selectedTime, setSelectedTime] = useState("");
   console.log(selectedTime);
 
-  const [firstName, setFirstName] = useState(name);
+  const [firstName, setFirstName] = useState();
   const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState(emails);
-  const [phoneNumber, setphoneNumber] = useState(phone);
-  const [country, setCountry] = useState(countrys);
+  const [email, setEmail] = useState();
+  const [phoneNumber, setphoneNumber] = useState();
+  const [country, setCountry] = useState();
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   const [meetings, setMeetings] = useState([]);

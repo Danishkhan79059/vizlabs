@@ -11,16 +11,17 @@ export default function Page() {
   const today = new Date();
   const searchParams = useSearchParams();
   // Get specific query params
-  const name = searchParams.get("name") || "";
-  const emails = searchParams.get("email") || "";
-  const phone = searchParams.get("phoneNumber") || "";
-  const countrys = searchParams.get("country") || "";
+  const name = searchParams.get("name") 
+  const emails = searchParams.get("email")
+  const phone = searchParams.get("phoneNumber") 
+  const countrys = searchParams.get("country") 
+  
 
   //state define
   const [selectedDate, setselectedDate] = useState(new Date());
   console.log(selectedDate);
 
-  const [selectedTime, setSelectedTime] = useState(null);
+  const [selectedTime, setSelectedTime] = useState("");
   console.log(selectedTime);
 
   const [firstName, setFirstName] = useState(name);
@@ -257,10 +258,10 @@ export default function Page() {
                 <Calendar
                   onChange={setselectedDate}
                   value={selectedDateUTC}
-                  prev2Label={null}
-                  next2Label={null}
-                  prevLabel={null}
-                  nextLabel={null}
+                  // prev2Label={null}
+                  // next2Label={null}
+                  // prevLabel={null}
+                  // nextLabel={null}
                   minDate={today}
                 />
               </div>

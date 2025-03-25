@@ -5,11 +5,11 @@ import { useRouter } from "next/navigation";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "react-time-picker/dist/TimePicker.css";
-import { useSearchParams } from "next/navigation";
+// import { useSearchParams } from "next/navigation";
 
 export default function Page() {
   const today = new Date();
-  const searchParams = useSearchParams();
+  // const searchParams = useSearchParams();
   // Get specific query params
   const name = searchParams.get("name") 
   const emails = searchParams.get("email")

@@ -1,14 +1,15 @@
 "use client";
+import { useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "react-time-picker/dist/TimePicker.css";
-import { useSearchParams } from "next/navigation";
+
 export default function Page() {
-  const today = new Date();
   const searchParams = useSearchParams();
+
   // Get specific query params
   const name = searchParams.get("name") || "";
   const emails = searchParams.get("email") || "";
@@ -16,12 +17,10 @@ export default function Page() {
   const countrys = searchParams.get("country") || "";
 
   //state define
+
+  const today = new Date();
   const [selectedDate, setselectedDate] = useState(new Date());
-  console.log(selectedDate);
-
   const [selectedTime, setSelectedTime] = useState("");
-  console.log(selectedTime);
-
   const [firstName, setFirstName] = useState(name);
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState(emails);
@@ -139,8 +138,6 @@ export default function Page() {
       return normalizeDate(meeting.selectedDate) === targetDateISO;
     })
     .map((meeting) => meeting?.selectedTime ?? "No Time Available");
-
-  console.log(selectedTimes);
 
   return (
     <>

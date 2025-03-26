@@ -141,171 +141,168 @@ export default function Page() {
 
   return (
     <>
-      <Suspense fallback={<div>Loading...</div>}>
-        <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-6 md:p-8 lg:p-12">
-          <div className="max-w-6xl w-full bg-white rounded-3xl shadow-xlp-6 md:p-10 flex flex-col md:flex-row gap-6 pt-32">
-            <div className="w-full md:w-1/2 p-6 mx-auto max-w-lg ">
-              <span className="bg-gray-200 text-blue-950 px-4 py-1 rounded-full text-sm font-bold">
-                Let's connect
-              </span>
-              <h1 className="text-3xl md:text-4xl font-bold mt-6 leading-tight text-center">
-                Let us showcase how we can help you
-              </h1>
-              <p className="text-gray-600 mt-4 text-base text-center">
-                Experience the power of vizta with a personalized demo tailored
-                to your needs. Schedule a session with our experts to explore
-                key features and see how we can help you achieve your goals.
-                Book your demo today and take the first step toward smarter
-                solutions!
-              </p>
+      <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-6 md:p-8 lg:p-12">
+        <div className="max-w-6xl w-full bg-white rounded-3xl shadow-xlp-6 md:p-10 flex flex-col md:flex-row gap-6 pt-32">
+          <div className="w-full md:w-1/2 p-6 mx-auto max-w-lg ">
+            <span className="bg-gray-200 text-blue-950 px-4 py-1 rounded-full text-sm font-bold">
+              Let's connect
+            </span>
+            <h1 className="text-3xl md:text-4xl font-bold mt-6 leading-tight text-center">
+              Let us showcase how we can help you
+            </h1>
+            <p className="text-gray-600 mt-4 text-base text-center">
+              Experience the power of vizta with a personalized demo tailored to
+              your needs. Schedule a session with our experts to explore key
+              features and see how we can help you achieve your goals. Book your
+              demo today and take the first step toward smarter solutions!
+            </p>
 
-              <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
-                <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
-                  <input
-                    type="name"
-                    placeholder="Name"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg text-lg"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                  />
-                </div>
+            <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
+              <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
                 <input
-                  type="email"
-                  placeholder="Email"
+                  type="name"
+                  placeholder="Name"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg text-lg"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
                 />
-                <input
-                  type="tel"
-                  placeholder="Phone Number"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-lg"
-                  value={phoneNumber}
-                  onChange={(e) => setphoneNumber(e.target.value)}
-                />
-                <input
-                  type="text"
-                  placeholder="Country"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg text-lg"
-                  value={country}
-                  onChange={(e) => setCountry(e.target.value)}
-                />
-                <button
-                  type="submit"
-                  className="relative w-full mt-4 py-3 bg-blue-950 text-white rounded-lg text-lg font-semibold  transition-transform transform hover:scale-105"
-                  disabled={loading}
-                >
-                  {loading ? (
-                    <div className="flex items-center justify-center">
-                      <svg
-                        className="animate-spin h-5 w-5 mr-2 text-white"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                      >
-                        <circle
-                          className="opacity-25"
-                          cx="12"
-                          cy="12"
-                          r="10"
-                          stroke="currentColor"
-                          strokeWidth="4"
-                        ></circle>
-                        <path
-                          className="opacity-75"
-                          fill="currentColor"
-                          d="M4 12a8 8 0 018-8v4l3-3-3-3v4a8 8 0 100 16z"
-                        ></path>
-                      </svg>
-                      Scheduling...
-                    </div>
-                  ) : (
-                    "Schedule Meeting"
-                  )}
-                </button>
-              </form>
-
-              {message["success"] && (
-                <p className="text-center text-green-600  p-2 rounded-md mt-3">
-                  ✅ {message["success"]}
-                </p>
-              )}
-              {message["error"] && (
-                <p className="text-center text-red-600  p-2 rounded-md mt-3">
-                  ❌ {message["error"]}
-                </p>
-              )}
-            </div>
-            {/* Right Side */}
-            <div className="w-full md:w-1/2 p-4 bg-white rounded-3xl  pt-10">
-              <div className="flex items-center gap-3">
-                <Image
-                  src="/image/Mohit.png"
-                  width={48}
-                  height={48}
-                  alt="User"
-                  className="rounded-full"
-                />
-                <div>
-                  <h2 className="text-lg md:text-xl font-bold">Mohit Panwar</h2>
-                  <p className="text-gray-600 text-sm">Business Appointment</p>
-                </div>
               </div>
-              <p className="text-gray-600 mt-3 text-sm md:text-base">
-                Welcome to Vizta! Schedule your appointment easily.
-              </p>
-              <div className="flex flex-wrap gap-2 mt-3 text-gray-600 text-sm">
-                <span>🕒 30 mins</span>
-                <span>🌍 Online </span>
-              </div>
-              <h3 className="text-lg font-bold mt-4">Select Date</h3>
-              <div className="flex justify-center items-center mt-3">
-                <div className="bg-white p-3 rounded-lg  w-fit">
-                  <Calendar
-                    onChange={setselectedDate}
-                    value={selectedDateUTC}
-                    prev2Label={""}
-                    next2Label={""}
-                    prevLabel={""}
-                    nextLabel={""}
-                    minDate={today}
-                  />
-                </div>
-              </div>
-              {selectedDateUTC && (
-                <>
-                  <h3 className="text-md md:text-lg font-bold mt-4">
-                    Select Time
-                  </h3>
-                  <div className="mt-3 bg-white p-3 md:p-4 rounded-lg  grid grid-cols-2 md:grid-cols-3 gap-2">
-                    {timeSlots.map((time) => (
-                      <button
-                        key={time}
-                        onClick={() => setSelectedTime(time)}
-                        disabled={
-                          selectedTimes.includes(time) || selectedTime === time
-                        }
-                        className={`px-4 py-2 rounded-md font-semibold text-center transition-colors w-full text-xs md:text-sm ${
-                          selectedTime === time || selectedTimes.includes(time)
-                            ? "bg-blue-950 text-white"
-                            : "bg-white text-blue-600 border-2 border-blue-400"
-                        } ${
-                          selectedTimes.includes(time) || selectedTime === time
-                            ? "bg-blue-950  cursor-not-allowed bg-white-400"
-                            : "hover:bg-blue-500 hover:text-white cursor-pointer"
-                        }`}
-                      >
-                        {time}
-                      </button>
-                    ))}
+              <input
+                type="email"
+                placeholder="Email"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-lg"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <input
+                type="tel"
+                placeholder="Phone Number"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-lg"
+                value={phoneNumber}
+                onChange={(e) => setphoneNumber(e.target.value)}
+              />
+              <input
+                type="text"
+                placeholder="Country"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg text-lg"
+                value={country}
+                onChange={(e) => setCountry(e.target.value)}
+              />
+              <button
+                type="submit"
+                className="relative w-full mt-4 py-3 bg-blue-950 text-white rounded-lg text-lg font-semibold  transition-transform transform hover:scale-105"
+                disabled={loading}
+              >
+                {loading ? (
+                  <div className="flex items-center justify-center">
+                    <svg
+                      className="animate-spin h-5 w-5 mr-2 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8v4l3-3-3-3v4a8 8 0 100 16z"
+                      ></path>
+                    </svg>
+                    Scheduling...
                   </div>
-                </>
-              )}
+                ) : (
+                  "Schedule Meeting"
+                )}
+              </button>
+            </form>
+
+            {message["success"] && (
+              <p className="text-center text-green-600  p-2 rounded-md mt-3">
+                ✅ {message["success"]}
+              </p>
+            )}
+            {message["error"] && (
+              <p className="text-center text-red-600  p-2 rounded-md mt-3">
+                ❌ {message["error"]}
+              </p>
+            )}
+          </div>
+          {/* Right Side */}
+          <div className="w-full md:w-1/2 p-4 bg-white rounded-3xl  pt-10">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/image/Mohit.png"
+                width={48}
+                height={48}
+                alt="User"
+                className="rounded-full"
+              />
+              <div>
+                <h2 className="text-lg md:text-xl font-bold">Mohit Panwar</h2>
+                <p className="text-gray-600 text-sm">Business Appointment</p>
+              </div>
             </div>
+            <p className="text-gray-600 mt-3 text-sm md:text-base">
+              Welcome to Vizta! Schedule your appointment easily.
+            </p>
+            <div className="flex flex-wrap gap-2 mt-3 text-gray-600 text-sm">
+              <span>🕒 30 mins</span>
+              <span>🌍 Online </span>
+            </div>
+            <h3 className="text-lg font-bold mt-4">Select Date</h3>
+            <div className="flex justify-center items-center mt-3">
+              <div className="bg-white p-3 rounded-lg  w-fit">
+                <Calendar
+                  onChange={setselectedDate}
+                  value={selectedDateUTC}
+                  prev2Label={""}
+                  next2Label={""}
+                  prevLabel={""}
+                  nextLabel={""}
+                  minDate={today}
+                />
+              </div>
+            </div>
+            {selectedDateUTC && (
+              <>
+                <h3 className="text-md md:text-lg font-bold mt-4">
+                  Select Time
+                </h3>
+                <div className="mt-3 bg-white p-3 md:p-4 rounded-lg  grid grid-cols-2 md:grid-cols-3 gap-2">
+                  {timeSlots.map((time) => (
+                    <button
+                      key={time}
+                      onClick={() => setSelectedTime(time)}
+                      disabled={
+                        selectedTimes.includes(time) || selectedTime === time
+                      }
+                      className={`px-4 py-2 rounded-md font-semibold text-center transition-colors w-full text-xs md:text-sm ${
+                        selectedTime === time || selectedTimes.includes(time)
+                          ? "bg-blue-950 text-white"
+                          : "bg-white text-blue-600 border-2 border-blue-400"
+                      } ${
+                        selectedTimes.includes(time) || selectedTime === time
+                          ? "bg-blue-950  cursor-not-allowed bg-white-400"
+                          : "hover:bg-blue-500 hover:text-white cursor-pointer"
+                      }`}
+                    >
+                      {time}
+                    </button>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </div>
-      </Suspense>
+      </div>
     </>
   );
 }

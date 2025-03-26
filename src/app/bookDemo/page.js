@@ -11,11 +11,10 @@ export default function Page() {
   const today = new Date();
   // const searchParams = useSearchParams();
   // Get specific query params
-  // const name = searchParams.get("name") 
+  // const name = searchParams.get("name")
   // const emails = searchParams.get("email")
-  // const phone = searchParams.get("phoneNumber") 
-  // const countrys = searchParams.get("country") 
-  
+  // const phone = searchParams.get("phoneNumber")
+  // const countrys = searchParams.get("country")
 
   //state define
   const [selectedDate, setselectedDate] = useState(new Date());
@@ -58,7 +57,9 @@ export default function Page() {
   useEffect(() => {
     const fetchMeetings = async () => {
       try {
-        const response = await fetch("https://demojsbackend.vizlabs.in/meeting/getAll");
+        const response = await fetch(
+          "https://demojsbackend.vizlabs.in/meeting/getAll"
+        );
         const data = await response.json();
         setMeetings(data.meetings);
       } catch (error) {
@@ -94,20 +95,23 @@ export default function Page() {
     };
 
     try {
-      const response = await fetch("https://demojsbackend.vizlabs.in/meeting/schedule", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://demojsbackend.vizlabs.in/meeting/schedule",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const result = await response.json();
 
       if (response.ok) {
-        setMessage("Meeting scheduled successfully!");
+        setMessage({ success: "Meeting scheduled successfully!" });
       } else {
-        setMessage(result.message || "Something went wrong!");
+        setMessage({ error: result.message || "Something went wrong!" });
 
         // If slot is already booked, update available slots
         if (result.availableSlots) {
@@ -115,7 +119,7 @@ export default function Page() {
         }
       }
     } catch (error) {
-      setMessage("Error: Unable to schedule meeting.");
+      setMessage({ error: "Error: Unable to schedule meeting." });
     } finally {
       setLoading(false);
     }
@@ -224,9 +228,14 @@ export default function Page() {
               </button>
             </form>
 
-            {message && (
+            {message["success"] && (
               <p className="text-center text-green-600  p-2 rounded-md mt-3">
-                ✅ {message}
+                ✅ {message["success"]}
+              </p>
+            )}
+            {message["error"] && (
+              <p className="text-center text-red-600  p-2 rounded-md mt-3">
+                ❌ {message["error"]}
               </p>
             )}
           </div>
@@ -258,10 +267,10 @@ export default function Page() {
                 <Calendar
                   onChange={setselectedDate}
                   value={selectedDateUTC}
-                  // prev2Label={null}
-                  // next2Label={null}
-                  // prevLabel={null}
-                  // nextLabel={null}
+                  prev2Label={""}
+                  next2Label={""}
+                  prevLabel={""}
+                  nextLabel={""}
                   minDate={today}
                 />
               </div>

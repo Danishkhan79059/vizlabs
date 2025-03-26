@@ -13,11 +13,25 @@ import { IoEyeOutline } from "react-icons/io5";
 import { IoIosLaptop } from "react-icons/io";
 import { GoDatabase } from "react-icons/go";
 import { PiMicrosoftTeamsLogoLight } from "react-icons/pi";
-import { FiPlayCircle } from "react-icons/fi";
 import { BsPlayCircleFill } from "react-icons/bs";
+
+const images = [
+  "/image/a1.png",
+  "/image/a2.png",
+  "/image/a3.png",
+  "/image/a4.png",
+  "/image/a5.png",
+  "/image/a6.png",
+  "/image/a7.png",
+  "/image/a9.png",
+  "/image/a4.png",
+  "/image/a10.png",
+  "/image/a11.png",
+];
 
 const Main = () => {
   const router = useRouter();
+  const duplicatedImages = [...images, ...images];
   const [showVideo, setShowVideo] = useState(false);
 
   useEffect(() => {
@@ -72,8 +86,6 @@ const Main = () => {
             "linear-gradient(136deg, rgba(235, 248, 255, 0.5) 50%, #ffffff 50%)",
         }}
       >
-        relative group w-96 h-56 flex items-center justify-center bg-white
-        border-2 rounded-lg overflow-hidden cursor-pointer
         <h1 className="text-4xl md:text-6xl font-bold text-blue-950 pt-32">
           Data Visualized,
           <span className="text-blue-500"> Decisions Amplified</span>
@@ -89,7 +101,7 @@ const Main = () => {
             <div>
               <button
                 onClick={() => setShowVideo(true)}
-                className="relative group w-96 h-56 flex items-center justify-center bg-white  rounded-lg overflow-hidden cursor-pointer"
+                className="relative group w-96 h-56 flex items-center justify-center bg-white border-2 rounded-lg overflow-hidden cursor-pointer"
               >
                 {!showVideo ? (
                   <>
@@ -98,7 +110,7 @@ const Main = () => {
                       alt="Video Thumbnail"
                       className="w-full h-full object-contain"
                     />
-                    <BsPlayCircleFill  className="absolute text-5xl" />
+                    <BsPlayCircleFill className="absolute text-5xl" />
                   </>
                 ) : (
                   <iframe
@@ -337,6 +349,28 @@ const Main = () => {
           </div>
         </div>
       </section>
+
+      {/* <div className="bg-blue-100 rounded-2xl p-6 lg:p-8 flex flex-col lg:flex-row justify-between items-center w-full max-w-6xl mx-auto relative overflow-hidden">
+      
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-blue-200 opacity-30 rounded-2xl"></div>
+
+        <div className="relative z-10 text-center lg:text-left">
+          <h2 className="text-2xl lg:text-3xl font-bold text-gray-900">
+            Want to visualize data better?
+          </h2>
+          <p className="text-gray-600 mt-2">
+            Get custom Vizta plans tailored for your visualization needs.
+          </p>
+        </div>
+
+        <button
+          onClick={() => router.push("/trial")}
+          className="relative z-10 bg-gray-800 text-white px-6 py-3 rounded-full mt-4 lg:mt-0 text-sm font-semibold hover:bg-gray-900 transition"
+        >
+          Contact
+        </button>
+      </div> */}
+
       <div
         className="bg-white flex flex-col justify-center items-center p-4 overflow-hidden"
         data-aos="fade-up"
@@ -433,10 +467,10 @@ const Main = () => {
         </div>
       </section>
 
-      <div className="bg-blue-50 relative flex flex-col items-center justify-center py-20 px-6 sm:px-12 lg:px-24 rounded-lg  overflow-hidden">
+      <div className="bg-white relative flex flex-col items-center justify-center py-20 px-6 sm:px-12 lg:px-24 rounded-lg  overflow-hidden">
         {/* Background Design */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="w-full h-full bg-gradient-to-b from-white to-blue-50"></div>
+          <div className="w-full h-full "></div>
         </div>
 
         {/* Content */}
@@ -462,6 +496,20 @@ const Main = () => {
           >
             contact us
           </button>
+        </div>
+      </div>
+      {/* Infinete time scrolling image  */}
+      <div className="relative w-full overflow-hidden bg-white py-5 ">
+        <div className="flex animate-[infiniteScroll_80s_linear_infinite] items-center space-x-4 w-max">
+          {duplicatedImages.map((src, index) => (
+            <img
+              key={index}
+              src={src}
+              alt=""
+              aria-hidden={index >= images.length}
+              className="w-96 h-56 sm:w-[28rem] sm:h-64 object-contain rounded-lg shadow-lg"
+            />
+          ))}
         </div>
       </div>
     </>

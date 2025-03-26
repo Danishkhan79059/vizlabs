@@ -2,6 +2,7 @@
 import { MdSmartDisplay } from "react-icons/md";
 import { useRouter } from "next/navigation";
 
+
 const Page = () => {
   const router = useRouter();
 
@@ -37,6 +38,8 @@ const Page = () => {
           </p>
         </div>
       </div>
+
+ 
 
       {/* Title */}
       <h2 className="text-3xl font-extrabold text-center text-blue-900 mt-10 mb-8">

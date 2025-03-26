@@ -14,15 +14,24 @@ export default {
         "soft-blue": "#DEEDFD",
         "soft-green": "#D5F1E4",
         "soft-pink": "#FDEDED",
-        "blush-rose": "#F28484", 
-        "mint-meadow": "#48C88A", 
-        "skyline-blue": "#20A5F8", 
-        "golden-peach": "#EDB86E", 
+        "blush-rose": "#F28484",
+        "mint-meadow": "#48C88A",
+        "skyline-blue": "#20A5F8",
+        "golden-peach": "#EDB86E",
         "blue-950": "#172554",
       },
       backgroundImage: {
         "custom-gradient":
           "linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 50%, color-mix(in srgb, var(--accent-color), transparent 98%) 25%, transparent 50%)",
+      },
+      keyframes: {
+        infiniteScroll: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
+      animation: {
+        infiniteScroll: "infiniteScroll 80s linear infinite",
       },
     },
   },

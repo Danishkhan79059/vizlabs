@@ -1,5 +1,5 @@
 "use client";
-// import { useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -8,24 +8,24 @@ import "react-calendar/dist/Calendar.css";
 import "react-time-picker/dist/TimePicker.css";
 
 export default function Page() {
-  // const searchParams = useSearchParams();
+  const searchParams = useSearchParams();
 
   // Get specific query params
-  // const name = searchParams.get("name") || "";
-  // const emails = searchParams.get("email") || "";
-  // const phone = searchParams.get("phoneNumber") || "";
-  // const countrys = searchParams.get("country") || "";
+  const name = searchParams.get("name") || "";
+  const emails = searchParams.get("email") || "";
+  const phone = searchParams.get("phoneNumber") || "";
+  const countrys = searchParams.get("country") || "";
 
-  //state define
+  // state define
 
   const today = new Date();
   const [selectedDate, setselectedDate] = useState(new Date());
   const [selectedTime, setSelectedTime] = useState("");
-  const [firstName, setFirstName] = useState();
+  const [firstName, setFirstName] = useState(name);
   const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState();
-  const [phoneNumber, setphoneNumber] = useState();
-  const [country, setCountry] = useState();
+  const [email, setEmail] = useState(emails);
+  const [phoneNumber, setphoneNumber] = useState(phone);
+  const [country, setCountry] = useState(countrys);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   const [meetings, setMeetings] = useState([]);
@@ -306,3 +306,5 @@ export default function Page() {
     </>
   );
 }
+
+
